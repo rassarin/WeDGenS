@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class Api_GetSourceListController</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> Api_GetSourceListController</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-consts">Constants</a>
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Api_GetSourceListController クラス</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Mitsubishi Space Software Co.,Ltd.</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_application---modules---api---controllers---GetSourceListController.php.html">/application/modules/api/controllers/GetSourceListController.php</a> (line <span class="field">24</span>)
+		</p>
+		
+				
+		<pre>Zend_Controller_Action
+   |
+   --<a href="../../Controller/Action/App_Controller_Action.html">App_Controller_Action</a>
+      |
+      --<a href="../../Controller/Action/App_Controller_ApiAction.html">App_Controller_ApiAction</a>
+         |
+         --Api_GetSourceListController</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-consts">Constants</a>
+							
+															<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#indexAction" title="details" class="method-name">indexAction</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#init" title="details" class="method-name">init</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#jsonAction" title="details" class="method-name">jsonAction</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#xmlAction" title="details" class="method-name">xmlAction</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-consts">Constants</a>
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Controller/Action/App_Controller_ApiAction.html">App_Controller_ApiAction</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#var$_responseFormat">App_Controller_ApiAction::$_responseFormat</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																			<a href="#sec-consts">Constants</a>
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodindexAction" id="indexAction"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">indexAction</span> (line <span class="line-number">45</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">index アクション。</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			indexAction
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodinit" id="init"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">init</span> (line <span class="line-number">33</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コントローラの初期化。</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			init
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../Controller/Action/App_Controller_ApiAction.html#methodinit">App_Controller_ApiAction::init()</a></dt>
+						<dd>コントローラの初期化。</dd>
+					</dl>
+			
+	</div>
+<a name="methodjsonAction" id="jsonAction"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">jsonAction</span> (line <span class="line-number">102</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">json アクション。</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			jsonAction
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodxmlAction" id="xmlAction"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">xmlAction</span> (line <span class="line-number">88</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">xml アクション。</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			xmlAction
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Controller/Action/App_Controller_ApiAction.html">App_Controller_ApiAction</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodcreateHadoopCmdApi">App_Controller_ApiAction::createHadoopCmdApi()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodcreateWgsGeneratorApi">App_Controller_ApiAction::createWgsGeneratorApi()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methoderrorResponse">App_Controller_ApiAction::errorResponse()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodfailureResponse">App_Controller_ApiAction::failureResponse()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodformatResponse">App_Controller_ApiAction::formatResponse()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodgetApiConfig">App_Controller_ApiAction::getApiConfig()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodgetApiService">App_Controller_ApiAction::getApiService()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodgetFileTransfer">App_Controller_ApiAction::getFileTransfer()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodgetResponseFormat">App_Controller_ApiAction::getResponseFormat()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodinit">App_Controller_ApiAction::init()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodisValidUploadFiles">App_Controller_ApiAction::isValidUploadFiles()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodrecieveUploadFiles">App_Controller_ApiAction::recieveUploadFiles()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodsendFailureResponse">App_Controller_ApiAction::sendFailureResponse()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodsendResponse">App_Controller_ApiAction::sendResponse()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodsendSuccessResponse">App_Controller_ApiAction::sendSuccessResponse()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodsetResponseFormat">App_Controller_ApiAction::setResponseFormat()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodstoreXmlFile">App_Controller_ApiAction::storeXmlFile()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_ApiAction.html#methodsuccessResponse">App_Controller_ApiAction::successResponse()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../Controller/Action/App_Controller_Action.html">App_Controller_Action</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodaccessLog">App_Controller_Action::accessLog()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodcheckViolation">App_Controller_Action::checkViolation()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodcriticalLog">App_Controller_Action::criticalLog()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodcsrfCheck">App_Controller_Action::csrfCheck()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methoddebugLog">App_Controller_Action::debugLog()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methoderrorLog">App_Controller_Action::errorLog()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodforward404">App_Controller_Action::forward404()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodforward404UnlessGetMethod">App_Controller_Action::forward404UnlessGetMethod()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodforward404UnlessGetOrPostMethod">App_Controller_Action::forward404UnlessGetOrPostMethod()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodforward404UnlessPostMethod">App_Controller_Action::forward404UnlessPostMethod()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodforwardForbidden">App_Controller_Action::forwardForbidden()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodforwardForbiddenUnlessGetMethod">App_Controller_Action::forwardForbiddenUnlessGetMethod()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodforwardForbiddenUnlessGetOrPostMethod">App_Controller_Action::forwardForbiddenUnlessGetOrPostMethod()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodforwardForbiddenUnlessPostMethod">App_Controller_Action::forwardForbiddenUnlessPostMethod()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetAccessLogger">App_Controller_Action::getAccessLogger()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetAclHelper">App_Controller_Action::getAclHelper()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetApplicationUrl">App_Controller_Action::getApplicationUrl()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetConfig">App_Controller_Action::getConfig()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetConfigCache">App_Controller_Action::getConfigCache()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetConstraintHelper">App_Controller_Action::getConstraintHelper()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetControllerHelperPrefix">App_Controller_Action::getControllerHelperPrefix()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetDbAdapter">App_Controller_Action::getDbAdapter()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetErrorLogger">App_Controller_Action::getErrorLogger()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetFilterInput">App_Controller_Action::getFilterInput()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetLogHelper">App_Controller_Action::getLogHelper()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetModuleBootstrap">App_Controller_Action::getModuleBootstrap()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetModuleService">App_Controller_Action::getModuleService()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetRequestUrl">App_Controller_Action::getRequestUrl()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetService">App_Controller_Action::getService()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodgetValidatorHelper">App_Controller_Action::getValidatorHelper()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodhasAccessPermission">App_Controller_Action::hasAccessPermission()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodincludeJavaScripts">App_Controller_Action::includeJavaScripts()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodincludeStyleSheets">App_Controller_Action::includeStyleSheets()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodinit">App_Controller_Action::init()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodinitViewSetting">App_Controller_Action::initViewSetting()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodloadPartialConfig">App_Controller_Action::loadPartialConfig()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodnoticeLog">App_Controller_Action::noticeLog()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodoutputValiationError">App_Controller_Action::outputValiationError()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodsendDownloadHttpHeader">App_Controller_Action::sendDownloadHttpHeader()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodsendJson">App_Controller_Action::sendJson()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodsendXml">App_Controller_Action::sendXml()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../Controller/Action/App_Controller_Action.html#methodwarningLog">App_Controller_Action::warningLog()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-vars">Vars</a>
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+										<h4>Inherited Constants</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../Controller/Action/App_Controller_Action.html">App_Controller_Action</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../Controller/Action/App_Controller_Action.html#constCONFIG_CACHE_LIFETIME">App_Controller_Action::CONFIG_CACHE_LIFETIME</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../Controller/Action/App_Controller_Action.html#constDEFAULT_CACHE_ID">App_Controller_Action::DEFAULT_CACHE_ID</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 27 Mar 2014 17:37:19 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+	</p>
+	</div></body>
+</html>

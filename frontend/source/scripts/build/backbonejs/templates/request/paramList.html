@@ -1,0 +1,65 @@
+<div class="element">
+    <%
+        var formElement = null;
+        var container   = $("<div>");
+
+        var labelObj = $("<label>").html(_.escape(label) + '：');
+        container.append(labelObj);
+        switch(type) {
+            case 'checkbox':
+                formElement = $("<div>").attr("class", "element indent2em");
+                _.each(items, function(item) {
+                    var checkboxItem = $("<input>").attr("type",  _.escape(type))
+                                                   .attr("id",   _.escape(id) + "_" + _.escape(item.key))
+                                                   .attr("name", _.escape(id) + '[]')
+                                                   .attr("value", _.escape(item.key));
+                    if (format) {
+                        checkboxItem.attr("class",  'validate-' + _.escape(format));
+                    }
+
+                    var checkboxLabel = $("<span>").html(_.escape(item.value) + ' ')
+                    formElement.append(checkboxItem)
+                               .append(checkboxLabel);
+                });
+                break;
+            case 'select':
+                formElement = $("<select>").attr("id",   _.escape(id))
+                                           .attr("name", _.escape(id));
+                if (items) {
+                    _.each(items, function(item) {
+                        var optionItem = $("<option>").attr("value", _.escape(item.key))
+                                                      .html(_.escape(item.value));
+                        formElement.append(optionItem);
+                    });
+                }
+                if (relational_items) {
+                    var optionItem = $("<option>").attr("value", "")
+                                                  .attr("class", "empty")
+                                                  .html(_.escape(label) + 'を選択');
+                    formElement.append(optionItem);
+                }
+                if (format) {
+                    formElement.attr("class",  'validate-' + _.escape(format));
+                }
+                break;
+            case 'text':
+                formElement = $("<input>").attr("type",  _.escape(type))
+                                          .attr("id",   _.escape(id))
+                                          .attr("name", _.escape(id));
+                if (validate.maxlength) {
+                    formElement.attr("maxlength",  _.escape(validate.maxlength));
+                }
+                if (validate.minlength) {
+                    formElement.attr("minlength",  _.escape(validate.minlength));
+                }
+                if (format) {
+                    formElement.attr("class",  'validate-' + _.escape(format));
+                }
+                break;
+        }
+        if (formElement) {
+            container.append(formElement);
+        }
+        print(container.html());
+    %>
+</div>

@@ -1,0 +1,10 @@
+{
+    "author": "MSS",
+    "name": "WgsUI",
+    "version": "1.0.0",
+    "devDependencies": {
+        "grunt": "~0.4.0",
+        "grunt-contrib-jst": "~0.5.0",
+        "grunt-contrib-watch": "~0.3.1"
+    }
+}

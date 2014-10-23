@@ -1,0 +1,1145 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class App_Const</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> App_Const</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+																	<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">App_Const クラス</p>
+<p class="description"><p>共通定数定義クラス。</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Mitsubishi Space Software Co.,Ltd.</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_library---App---Const.php.html">/library/App/Const.php</a> (line <span class="field">23</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+								</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#CONTENT_TYPE_CSV" title="details" class="const-name">CONTENT_TYPE_CSV</a> = 					<span class="var-type"> 'text/csv'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#CONTENT_TYPE_HTML" title="details" class="const-name">CONTENT_TYPE_HTML</a> = 					<span class="var-type"> 'text/html'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#CONTENT_TYPE_JS" title="details" class="const-name">CONTENT_TYPE_JS</a> = 					<span class="var-type"> 'text/javascript'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#CONTENT_TYPE_JSON" title="details" class="const-name">CONTENT_TYPE_JSON</a> = 					<span class="var-type"> 'application/json'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#CONTENT_TYPE_OCTET_STREAM" title="details" class="const-name">CONTENT_TYPE_OCTET_STREAM</a> = 					<span class="var-type"> 'application/octet-stream'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#CONTENT_TYPE_TEXT" title="details" class="const-name">CONTENT_TYPE_TEXT</a> = 					<span class="var-type"> 'text/plain'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#CONTENT_TYPE_XML" title="details" class="const-name">CONTENT_TYPE_XML</a> = 					<span class="var-type"> 'application/xml'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#CONTENT_TYPE_ZIP" title="details" class="const-name">CONTENT_TYPE_ZIP</a> = 					<span class="var-type"> 'application/zip'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#DATA_TYPE_MET_BROKER" title="details" class="const-name">DATA_TYPE_MET_BROKER</a> = 					<span class="var-type"> 2</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#DATA_TYPE_USER_DATA" title="details" class="const-name">DATA_TYPE_USER_DATA</a> = 					<span class="var-type"> 1</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#DEFAULT_LOCALE" title="details" class="const-name">DEFAULT_LOCALE</a> = 					<span class="var-type"> 'ja'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#DURATION_TYPE_DAILY" title="details" class="const-name">DURATION_TYPE_DAILY</a> = 					<span class="var-type"> 'daily'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#DURATION_TYPE_HOURLY" title="details" class="const-name">DURATION_TYPE_HOURLY</a> = 					<span class="var-type"> 'hourly'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#FAILURE_CODE" title="details" class="const-name">FAILURE_CODE</a> = 					<span class="var-type"> 'FAILURE'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#GENERATOR_STAT_AVAILABLE" title="details" class="const-name">GENERATOR_STAT_AVAILABLE</a> = 					<span class="var-type"> 'AVAILABLE'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#GENERATOR_STAT_UNAVAILABLE" title="details" class="const-name">GENERATOR_STAT_UNAVAILABLE</a> = 					<span class="var-type"> 'UNAVAILABLE'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#INT_LIMIT" title="details" class="const-name">INT_LIMIT</a> = 					<span class="var-type"> 2147483648</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#LIBRARY_TYPE_CDFDM" title="details" class="const-name">LIBRARY_TYPE_CDFDM</a> = 					<span class="var-type"> 2</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#LIBRARY_TYPE_CLIGEN" title="details" class="const-name">LIBRARY_TYPE_CLIGEN</a> = 					<span class="var-type"> 1</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RANGE_TYPE_AREA" title="details" class="const-name">RANGE_TYPE_AREA</a> = 					<span class="var-type"> 'area'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RANGE_TYPE_MESH" title="details" class="const-name">RANGE_TYPE_MESH</a> = 					<span class="var-type"> 'mesh'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RANGE_TYPE_POINT" title="details" class="const-name">RANGE_TYPE_POINT</a> = 					<span class="var-type"> 'point'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RANGE_TYPE_USER" title="details" class="const-name">RANGE_TYPE_USER</a> = 					<span class="var-type"> 'user'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#REGION_NONE" title="details" class="const-name">REGION_NONE</a> = 					<span class="var-type"> 'none'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#REQUEST_STAT_ACCEPT" title="details" class="const-name">REQUEST_STAT_ACCEPT</a> = 					<span class="var-type"> 'ACCEPT'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#REQUEST_STAT_CANCEL" title="details" class="const-name">REQUEST_STAT_CANCEL</a> = 					<span class="var-type"> 'CANCEL'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#REQUEST_STAT_ERROR" title="details" class="const-name">REQUEST_STAT_ERROR</a> = 					<span class="var-type"> 'ERROR'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#REQUEST_STAT_FINISHED" title="details" class="const-name">REQUEST_STAT_FINISHED</a> = 					<span class="var-type"> 'FINISHED'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#REQUEST_STAT_RUNNING" title="details" class="const-name">REQUEST_STAT_RUNNING</a> = 					<span class="var-type"> 'RUNNING'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#REQUEST_STAT_TERMINATED" title="details" class="const-name">REQUEST_STAT_TERMINATED</a> = 					<span class="var-type"> 'TERMINATED'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#REQUEST_STAT_WAITING" title="details" class="const-name">REQUEST_STAT_WAITING</a> = 					<span class="var-type"> 'WAITING'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RESPONSE_FORMAT_JSON" title="details" class="const-name">RESPONSE_FORMAT_JSON</a> = 					<span class="var-type"> 'json'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RESPONSE_FORMAT_XML" title="details" class="const-name">RESPONSE_FORMAT_XML</a> = 					<span class="var-type"> 'xml'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RESULT_FORMAT_CHART" title="details" class="const-name">RESULT_FORMAT_CHART</a> = 					<span class="var-type"> 'chart'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RESULT_FORMAT_CSV" title="details" class="const-name">RESULT_FORMAT_CSV</a> = 					<span class="var-type"> 'csv'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RESULT_FORMAT_HTML" title="details" class="const-name">RESULT_FORMAT_HTML</a> = 					<span class="var-type"> 'html'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RESULT_FORMAT_XML" title="details" class="const-name">RESULT_FORMAT_XML</a> = 					<span class="var-type"> 'xml'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#RESULT_FORMAT_ZIP" title="details" class="const-name">RESULT_FORMAT_ZIP</a> = 					<span class="var-type"> 'zip'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#STAT_DELETE" title="details" class="const-name">STAT_DELETE</a> = 					<span class="var-type"> 4</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#STAT_DISABLE" title="details" class="const-name">STAT_DISABLE</a> = 					<span class="var-type"> 2</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#STAT_ENABLE" title="details" class="const-name">STAT_ENABLE</a> = 					<span class="var-type"> 1</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#STAT_LOCKED" title="details" class="const-name">STAT_LOCKED</a> = 					<span class="var-type"> 3</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#STAT_UNKNOWN" title="details" class="const-name">STAT_UNKNOWN</a> = 					<span class="var-type"> 0</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#SUCCESS_CODE" title="details" class="const-name">SUCCESS_CODE</a> = 					<span class="var-type"> 'SUCCESS'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#TIME_ZONE" title="details" class="const-name">TIME_ZONE</a> = 					<span class="var-type"> 'Asia/Tokyo'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+
+
+	
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<span class="disabled">Constants</span>
+						
+			
+								</div>
+		<div class="info-box-body">
+			<a name="constCONTENT_TYPE_CSV" id="CONTENT_TYPE_CSV"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CONTENT_TYPE_CSV</span>
+			 = <span class="const-default"> 'text/csv'</span>
+			(line <span class="line-number">99</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンテンツタイプ:CSV</p>
+	
+	
+</div>
+<a name="constCONTENT_TYPE_HTML" id="CONTENT_TYPE_HTML"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CONTENT_TYPE_HTML</span>
+			 = <span class="const-default"> 'text/html'</span>
+			(line <span class="line-number">84</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンテンツタイプ:HTML</p>
+	
+	
+</div>
+<a name="constCONTENT_TYPE_JS" id="CONTENT_TYPE_JS"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CONTENT_TYPE_JS</span>
+			 = <span class="const-default"> 'text/javascript'</span>
+			(line <span class="line-number">89</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンテンツタイプ:JavaScript</p>
+	
+	
+</div>
+<a name="constCONTENT_TYPE_JSON" id="CONTENT_TYPE_JSON"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CONTENT_TYPE_JSON</span>
+			 = <span class="const-default"> 'application/json'</span>
+			(line <span class="line-number">74</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンテンツタイプ:JSON</p>
+	
+	
+</div>
+<a name="constCONTENT_TYPE_OCTET_STREAM" id="CONTENT_TYPE_OCTET_STREAM"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CONTENT_TYPE_OCTET_STREAM</span>
+			 = <span class="const-default"> 'application/octet-stream'</span>
+			(line <span class="line-number">109</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンテンツタイプ:application/octet-stream</p>
+	
+	
+</div>
+<a name="constCONTENT_TYPE_TEXT" id="CONTENT_TYPE_TEXT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CONTENT_TYPE_TEXT</span>
+			 = <span class="const-default"> 'text/plain'</span>
+			(line <span class="line-number">94</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンテンツタイプ:プレーンテキスト</p>
+	
+	
+</div>
+<a name="constCONTENT_TYPE_XML" id="CONTENT_TYPE_XML"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CONTENT_TYPE_XML</span>
+			 = <span class="const-default"> 'application/xml'</span>
+			(line <span class="line-number">79</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンテンツタイプ:XML</p>
+	
+	
+</div>
+<a name="constCONTENT_TYPE_ZIP" id="CONTENT_TYPE_ZIP"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CONTENT_TYPE_ZIP</span>
+			 = <span class="const-default"> 'application/zip'</span>
+			(line <span class="line-number">104</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンテンツタイプ:Zip</p>
+	
+	
+</div>
+<a name="constDATA_TYPE_MET_BROKER" id="DATA_TYPE_MET_BROKER"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">DATA_TYPE_MET_BROKER</span>
+			 = <span class="const-default"> 2</span>
+			(line <span class="line-number">145</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">データ種別：MetBrokerデータ</p>
+	
+	
+</div>
+<a name="constDATA_TYPE_USER_DATA" id="DATA_TYPE_USER_DATA"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">DATA_TYPE_USER_DATA</span>
+			 = <span class="const-default"> 1</span>
+			(line <span class="line-number">140</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">データ種別：ユーザ投入データ</p>
+	
+	
+</div>
+<a name="constDEFAULT_LOCALE" id="DEFAULT_LOCALE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">DEFAULT_LOCALE</span>
+			 = <span class="const-default"> 'ja'</span>
+			(line <span class="line-number">62</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ロケール</p>
+	
+	
+</div>
+<a name="constDURATION_TYPE_DAILY" id="DURATION_TYPE_DAILY"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">DURATION_TYPE_DAILY</span>
+			 = <span class="const-default"> 'daily'</span>
+			(line <span class="line-number">269</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">デュレーション種別:日別</p>
+	
+	
+</div>
+<a name="constDURATION_TYPE_HOURLY" id="DURATION_TYPE_HOURLY"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">DURATION_TYPE_HOURLY</span>
+			 = <span class="const-default"> 'hourly'</span>
+			(line <span class="line-number">274</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">デュレーション種別:時別</p>
+	
+	
+</div>
+<a name="constFAILURE_CODE" id="FAILURE_CODE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">FAILURE_CODE</span>
+			 = <span class="const-default"> 'FAILURE'</span>
+			(line <span class="line-number">133</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XML/JSONレスポンス用ステータスコード：失敗</p>
+	
+	
+</div>
+<a name="constGENERATOR_STAT_AVAILABLE" id="GENERATOR_STAT_AVAILABLE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">GENERATOR_STAT_AVAILABLE</span>
+			 = <span class="const-default"> 'AVAILABLE'</span>
+			(line <span class="line-number">211</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ジェネレータステータス：利用可能</p>
+	
+	
+</div>
+<a name="constGENERATOR_STAT_UNAVAILABLE" id="GENERATOR_STAT_UNAVAILABLE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">GENERATOR_STAT_UNAVAILABLE</span>
+			 = <span class="const-default"> 'UNAVAILABLE'</span>
+			(line <span class="line-number">216</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ジェネレータステータス：利用不能</p>
+	
+	
+</div>
+<a name="constINT_LIMIT" id="INT_LIMIT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">INT_LIMIT</span>
+			 = <span class="const-default"> 2147483648</span>
+			(line <span class="line-number">67</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">整数上限値(INT4 = 2147483647 + 1 =  2147483648)</p>
+	
+	
+</div>
+<a name="constLIBRARY_TYPE_CDFDM" id="LIBRARY_TYPE_CDFDM"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LIBRARY_TYPE_CDFDM</span>
+			 = <span class="const-default"> 2</span>
+			(line <span class="line-number">255</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ライブラリ種別:cdfdm</p>
+	
+	
+</div>
+<a name="constLIBRARY_TYPE_CLIGEN" id="LIBRARY_TYPE_CLIGEN"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LIBRARY_TYPE_CLIGEN</span>
+			 = <span class="const-default"> 1</span>
+			(line <span class="line-number">250</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ライブラリ種別:CLIGEN</p>
+	
+	
+</div>
+<a name="constRANGE_TYPE_AREA" id="RANGE_TYPE_AREA"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RANGE_TYPE_AREA</span>
+			 = <span class="const-default"> 'area'</span>
+			(line <span class="line-number">157</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">地点選択範囲種別：エリア</p>
+	
+	
+</div>
+<a name="constRANGE_TYPE_MESH" id="RANGE_TYPE_MESH"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RANGE_TYPE_MESH</span>
+			 = <span class="const-default"> 'mesh'</span>
+			(line <span class="line-number">162</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">地点選択範囲種別：メッシュ</p>
+	
+	
+</div>
+<a name="constRANGE_TYPE_POINT" id="RANGE_TYPE_POINT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RANGE_TYPE_POINT</span>
+			 = <span class="const-default"> 'point'</span>
+			(line <span class="line-number">152</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">地点選択範囲種別：地点</p>
+	
+	
+</div>
+<a name="constRANGE_TYPE_USER" id="RANGE_TYPE_USER"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RANGE_TYPE_USER</span>
+			 = <span class="const-default"> 'user'</span>
+			(line <span class="line-number">167</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">地点選択範囲種別：ユーザ登録データ</p>
+	
+	
+</div>
+<a name="constREGION_NONE" id="REGION_NONE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">REGION_NONE</span>
+			 = <span class="const-default"> 'none'</span>
+			(line <span class="line-number">262</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">リージョンID:リージョン定義なし</p>
+	
+	
+</div>
+<a name="constREQUEST_STAT_ACCEPT" id="REQUEST_STAT_ACCEPT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">REQUEST_STAT_ACCEPT</span>
+			 = <span class="const-default"> 'ACCEPT'</span>
+			(line <span class="line-number">174</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">リクエストステータス：リクエスト受付</p>
+	
+	
+</div>
+<a name="constREQUEST_STAT_CANCEL" id="REQUEST_STAT_CANCEL"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">REQUEST_STAT_CANCEL</span>
+			 = <span class="const-default"> 'CANCEL'</span>
+			(line <span class="line-number">194</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">リクエストステータス：実行キャンセル</p>
+	
+	
+</div>
+<a name="constREQUEST_STAT_ERROR" id="REQUEST_STAT_ERROR"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">REQUEST_STAT_ERROR</span>
+			 = <span class="const-default"> 'ERROR'</span>
+			(line <span class="line-number">204</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">リクエストステータス：エラー</p>
+	
+	
+</div>
+<a name="constREQUEST_STAT_FINISHED" id="REQUEST_STAT_FINISHED"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">REQUEST_STAT_FINISHED</span>
+			 = <span class="const-default"> 'FINISHED'</span>
+			(line <span class="line-number">189</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">リクエストステータス：実行完了</p>
+	
+	
+</div>
+<a name="constREQUEST_STAT_RUNNING" id="REQUEST_STAT_RUNNING"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">REQUEST_STAT_RUNNING</span>
+			 = <span class="const-default"> 'RUNNING'</span>
+			(line <span class="line-number">184</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">リクエストステータス：実行中</p>
+	
+	
+</div>
+<a name="constREQUEST_STAT_TERMINATED" id="REQUEST_STAT_TERMINATED"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">REQUEST_STAT_TERMINATED</span>
+			 = <span class="const-default"> 'TERMINATED'</span>
+			(line <span class="line-number">199</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">リクエストステータス：強制終了</p>
+	
+	
+</div>
+<a name="constREQUEST_STAT_WAITING" id="REQUEST_STAT_WAITING"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">REQUEST_STAT_WAITING</span>
+			 = <span class="const-default"> 'WAITING'</span>
+			(line <span class="line-number">179</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">リクエストステータス：実行待ち</p>
+	
+	
+</div>
+<a name="constRESPONSE_FORMAT_JSON" id="RESPONSE_FORMAT_JSON"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RESPONSE_FORMAT_JSON</span>
+			 = <span class="const-default"> 'json'</span>
+			(line <span class="line-number">116</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">APIレスポンス形式:JSON</p>
+	
+	
+</div>
+<a name="constRESPONSE_FORMAT_XML" id="RESPONSE_FORMAT_XML"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RESPONSE_FORMAT_XML</span>
+			 = <span class="const-default"> 'xml'</span>
+			(line <span class="line-number">121</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">APIレスポンス形式:XML</p>
+	
+	
+</div>
+<a name="constRESULT_FORMAT_CHART" id="RESULT_FORMAT_CHART"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RESULT_FORMAT_CHART</span>
+			 = <span class="const-default"> 'chart'</span>
+			(line <span class="line-number">238</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">出力形式:グラフ</p>
+	
+	
+</div>
+<a name="constRESULT_FORMAT_CSV" id="RESULT_FORMAT_CSV"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RESULT_FORMAT_CSV</span>
+			 = <span class="const-default"> 'csv'</span>
+			(line <span class="line-number">233</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">出力形式:CSV</p>
+	
+	
+</div>
+<a name="constRESULT_FORMAT_HTML" id="RESULT_FORMAT_HTML"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RESULT_FORMAT_HTML</span>
+			 = <span class="const-default"> 'html'</span>
+			(line <span class="line-number">223</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">出力形式:HTML</p>
+	
+	
+</div>
+<a name="constRESULT_FORMAT_XML" id="RESULT_FORMAT_XML"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RESULT_FORMAT_XML</span>
+			 = <span class="const-default"> 'xml'</span>
+			(line <span class="line-number">228</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">出力形式:XML</p>
+	
+	
+</div>
+<a name="constRESULT_FORMAT_ZIP" id="RESULT_FORMAT_ZIP"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">RESULT_FORMAT_ZIP</span>
+			 = <span class="const-default"> 'zip'</span>
+			(line <span class="line-number">243</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">出力形式:ZIP</p>
+	
+	
+</div>
+<a name="constSTAT_DELETE" id="STAT_DELETE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">STAT_DELETE</span>
+			 = <span class="const-default"> 4</span>
+			(line <span class="line-number">50</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ステータス値：削除</p>
+	
+	
+</div>
+<a name="constSTAT_DISABLE" id="STAT_DISABLE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">STAT_DISABLE</span>
+			 = <span class="const-default"> 2</span>
+			(line <span class="line-number">40</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ステータス値：無効</p>
+	
+	
+</div>
+<a name="constSTAT_ENABLE" id="STAT_ENABLE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">STAT_ENABLE</span>
+			 = <span class="const-default"> 1</span>
+			(line <span class="line-number">35</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ステータス値：有効</p>
+	
+	
+</div>
+<a name="constSTAT_LOCKED" id="STAT_LOCKED"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">STAT_LOCKED</span>
+			 = <span class="const-default"> 3</span>
+			(line <span class="line-number">45</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ステータス値：保護</p>
+	
+	
+</div>
+<a name="constSTAT_UNKNOWN" id="STAT_UNKNOWN"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">STAT_UNKNOWN</span>
+			 = <span class="const-default"> 0</span>
+			(line <span class="line-number">30</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ステータス値：有効</p>
+	
+	
+</div>
+<a name="constSUCCESS_CODE" id="SUCCESS_CODE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">SUCCESS_CODE</span>
+			 = <span class="const-default"> 'SUCCESS'</span>
+			(line <span class="line-number">128</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XML/JSONレスポンス用ステータスコード：成功</p>
+	
+	
+</div>
+<a name="constTIME_ZONE" id="TIME_ZONE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">TIME_ZONE</span>
+			 = <span class="const-default"> 'Asia/Tokyo'</span>
+			(line <span class="line-number">57</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">タイムゾーン</p>
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 27 Mar 2014 17:37:14 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+	</p>
+	</div></body>
+</html>

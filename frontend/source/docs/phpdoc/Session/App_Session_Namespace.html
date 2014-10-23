@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class App_Session_Namespace</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> App_Session_Namespace</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|													<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">App_Session_Namespace クラス</p>
+<p class="description"><p>セッション名前空間操作クラス</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Mitsubishi Space Software Co.,Ltd.</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_library---App---Session---Namespace.php.html">/library/App/Session/Namespace.php</a> (line <span class="field">24</span>)
+		</p>
+		
+				
+		<pre>Zend_Session_Namespace
+   |
+   --App_Session_Namespace</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../Session/Namespace/App_Session_Namespace_AppUser.html">App_Session_Namespace_AppUser</a>
+					</td>
+					<td>
+											App_Session_Namespace_AppUser クラス
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#NS_SYSTEM" title="details" class="const-name">NS_SYSTEM</a> = 					<span class="var-type"> 'app'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#TOKEN_MAX_SAVE_COUNTS" title="details" class="const-name">TOKEN_MAX_SAVE_COUNTS</a> = 					<span class="var-type"> 10</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#TOKEN_SEED" title="details" class="const-name">TOKEN_SEED</a> = 					<span class="var-type"> 'csrf_token'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+									<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																															
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$namespace</span> = <span class="var-default">self::NS_SYSTEM</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$singleInstance</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#checkCsrfToken" title="details" class="method-name">checkCsrfToken</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#clear" title="details" class="method-name">clear</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#clearAuthenticated" title="details" class="method-name">clearAuthenticated</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#clearCsrfToken" title="details" class="method-name">clearCsrfToken</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#clearGuest" title="details" class="method-name">clearGuest</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#clearUserTicket" title="details" class="method-name">clearUserTicket</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#createUserTicket" title="details" class="method-name">createUserTicket</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$userId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#generateCsrfToken" title="details" class="method-name">generateCsrfToken</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getCsrfToken" title="details" class="method-name">getCsrfToken</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getCurrentAction" title="details" class="method-name">getCurrentAction</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getCurrentController" title="details" class="method-name">getCurrentController</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getCurrentModule" title="details" class="method-name">getCurrentModule</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getUserTicket" title="details" class="method-name">getUserTicket</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isAuthenticated" title="details" class="method-name">isAuthenticated</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#isGuest" title="details" class="method-name">isGuest</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setAuthenticated" title="details" class="method-name">setAuthenticated</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setCurrentAction" title="details" class="method-name">setCurrentAction</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setCurrentController" title="details" class="method-name">setCurrentController</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$controller</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setCurrentModule" title="details" class="method-name">setCurrentModule</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$module</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setGuest" title="details" class="method-name">setGuest</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setUserTicket" title="details" class="method-name">setUserTicket</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$ticket</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+																		<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">52</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンストラクタ</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$namespace</span> = <span class="var-default">self::NS_SYSTEM</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$singleInstance</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$namespace</span><span class="var-description">: 名前空間</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$singleInstance</span><span class="var-description">: 真：名前空間へのアクセスを単一インスタンスに制限する</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../Session/Namespace/App_Session_Namespace_AppUser.html#method__construct">App_Session_Namespace_AppUser::__construct()</a>
+								: コンストラクタ
+							</li>
+				</ul>
+	</div>
+<a name="methodcheckCsrfToken" id="checkCsrfToken"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">checkCsrfToken</span> (line <span class="line-number">313</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CSRF対策用トークンのチェック</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 真：OK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			checkCsrfToken
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$token</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$token</span><span class="var-description">: CSRF対策用トークン</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclear" id="clear"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">clear</span> (line <span class="line-number">65</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">セッション変数のクリア</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			clear
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclearAuthenticated" id="clearAuthenticated"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">clearAuthenticated</span> (line <span class="line-number">101</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">認証済みフラグを消去</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			clearAuthenticated
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclearCsrfToken" id="clearCsrfToken"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">clearCsrfToken</span> (line <span class="line-number">331</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CSRF対策用トークンのクリア</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			clearCsrfToken
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclearGuest" id="clearGuest"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">clearGuest</span> (line <span class="line-number">137</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">非ログインユーザフラグを初期化</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			clearGuest
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclearUserTicket" id="clearUserTicket"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">clearUserTicket</span> (line <span class="line-number">174</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ユーザチケットのクリア</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			clearUserTicket
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcreateUserTicket" id="createUserTicket"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">createUserTicket</span> (line <span class="line-number">187</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ユーザチケットの生成</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 一意の識別子</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			createUserTicket
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$userId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$userId</span><span class="var-description">: ログインID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgenerateCsrfToken" id="generateCsrfToken"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">generateCsrfToken</span> (line <span class="line-number">292</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CSRF対策用トークンの生成</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> CSRF対策用トークン</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			generateCsrfToken
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCsrfToken" id="getCsrfToken"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getCsrfToken</span> (line <span class="line-number">277</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CSRF対策用トークン格納配列の取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> CSRF対策用トークン</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getCsrfToken
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCurrentAction" id="getCurrentAction"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getCurrentAction</span> (line <span class="line-number">202</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">カレントアクション名の取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> カレントアクション名</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getCurrentAction
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCurrentController" id="getCurrentController"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getCurrentController</span> (line <span class="line-number">227</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">カレントコントローラ名の取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> カレントコントローラ名</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getCurrentController
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCurrentModule" id="getCurrentModule"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getCurrentModule</span> (line <span class="line-number">252</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">カレントモジュール名の取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> カレントモジュール名</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getCurrentModule
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetUserTicket" id="getUserTicket"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getUserTicket</span> (line <span class="line-number">162</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ユーザチケットの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 一意の識別子</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getUserTicket
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisAuthenticated" id="isAuthenticated"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">isAuthenticated</span> (line <span class="line-number">77</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">認証済みかどうかのチェック</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 真：認証済</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isAuthenticated
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisGuest" id="isGuest"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">isGuest</span> (line <span class="line-number">113</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">非ログインユーザかどうかのチェック</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 真：非ログインユーザ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			isGuest
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetAuthenticated" id="setAuthenticated"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setAuthenticated</span> (line <span class="line-number">89</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">認証済みフラグを立てる</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setAuthenticated
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetCurrentAction" id="setCurrentAction"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setCurrentAction</span> (line <span class="line-number">215</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">カレントアクション名のセット</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setCurrentAction
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: カレントアクション名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetCurrentController" id="setCurrentController"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setCurrentController</span> (line <span class="line-number">240</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">カレントコントローラ名のセット</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setCurrentController
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$controller</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$controller</span><span class="var-description">: カレントコントローラ名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetCurrentModule" id="setCurrentModule"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setCurrentModule</span> (line <span class="line-number">265</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">カレントモジュール名のセット</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setCurrentModule
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$module</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$module</span><span class="var-description">: カレントモジュール名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetGuest" id="setGuest"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setGuest</span> (line <span class="line-number">125</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">非ログインユーザフラグを立てる</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setGuest
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetUserTicket" id="setUserTicket"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setUserTicket</span> (line <span class="line-number">150</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ユーザチケットのセット</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setUserTicket
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$ticket</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ticket</span><span class="var-description">: ユーザチケット</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constNS_SYSTEM" id="NS_SYSTEM"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">NS_SYSTEM</span>
+			 = <span class="const-default"> 'app'</span>
+			(line <span class="line-number">31</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">セッションデフォルト名前空間</p>
+	
+	
+</div>
+<a name="constTOKEN_MAX_SAVE_COUNTS" id="TOKEN_MAX_SAVE_COUNTS"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">TOKEN_MAX_SAVE_COUNTS</span>
+			 = <span class="const-default"> 10</span>
+			(line <span class="line-number">41</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CSRF対策用トークンの保持数</p>
+	
+	
+</div>
+<a name="constTOKEN_SEED" id="TOKEN_SEED"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">TOKEN_SEED</span>
+			 = <span class="const-default"> 'csrf_token'</span>
+			(line <span class="line-number">36</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CSRF対策用トークン生成文字列</p>
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 27 Mar 2014 17:37:23 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+	</p>
+	</div></body>
+</html>

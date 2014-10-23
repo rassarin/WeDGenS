@@ -1,0 +1,10 @@
+    <div class="element" id="format_elemnt">
+        <input type="hidden" id="selected_request_id" name="selected_request_id" value="<%- request_id %>" class="validate-uuid validate-required">
+        <input type="radio"  id="format_xml"   name="format" value="xml">XML
+        <input type="radio"  id="format_csv"   name="format" value="csv">CSV
+        <input type="radio"  id="format_html"  name="format" value="html">表(HTML)
+        <input type="radio"  id="format_html"  name="format" value="chart">グラフ(HTML)
+        <input type="radio"  id="format_zip"   name="format" value="zip">XML+XSL
+        <button id="download_btn">ダウンロード</button>
+        <span id="download_msg" class="loading"></span>
+    </div>

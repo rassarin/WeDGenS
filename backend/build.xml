@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="build" name="wgs-backend">
+	<!-- ========== 環境設定 ========== -->
+	<!-- コンパイラの設定 -->
+	<!-- デバッグ情報を付けないでコンパイルする場合は、プロパティdebugをfalseに変更してください。 -->
+	<property name="debug" value="true"/>
+	<property name="debuglevel" value="source,lines,vars"/>
+	<property name="target" value="1.7"/>
+	<property name="source" value="1.7"/>
+	<property name="output-class-path" value="src/main/webapp/WEB-INF/classes"/>
+	<property name="src-path" value="src/main/java"/>
+	<property name="resources-path" value="src/main/resources"/>
+	<path id="compile.classpath">
+		<pathelement location="${output-class-path}"/>
+		<fileset dir="src/main/webapp/WEB-INF/lib">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="lib">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+
+	<!-- warファイル生成の設定 -->
+	<property name="webapp-path" value="src/main/webapp"/>
+	<property name="webapp-lib-path" value="src/main/webapp/WEB-INF/lib"/>
+	<property name="war-file" value="wgs-generator.war"/>
+	<property name="web-xml-file" value="src/main/webapp/WEB-INF/web.xml"/>
+
+	<!-- ////////// ここから下は基本的に設定変更不要 ////////// -->
+	<!-- ========== 実行コマンド ========== -->
+	<!-- 初期化処理（クラスファイルの出力先ディレクトリ生成、設定ファイルのコピー） -->
+	<target name="init">
+		<mkdir dir="${output-class-path}"/>
+		<copy includeemptydirs="false" todir="${output-class-path}">
+			<fileset dir="${src-path}">
+				<exclude name="**/*.launch"/>
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+		<copy includeemptydirs="false" todir="${output-class-path}">
+			<fileset dir="${resources-path}">
+				<exclude name="**/*.launch"/>
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- 生成したwarファイルとクラスファイルの削除 -->
+	<target name="clean">
+		<delete dir="${output-class-path}"/>
+		<delete file="${war-file}"/>
+	</target>
+
+	<!-- デフォルトプロジェクト（warファイル生成） -->
+	<target depends="war-project" name="build"/>
+
+	<!-- コンパイル（クラスファイル生成） -->
+	<target depends="init" name="compile-project">
+		<echo message="${ant.project.name}: ${ant.file}"/>
+		<javac debug="${debug}" debuglevel="${debuglevel}"
+				destdir="${output-class-path}"
+				includeantruntime="false" source="${source}" target="${target}">
+			<src path="${src-path}"/>
+			<src path="${resources-path}"/>
+			<classpath refid="compile.classpath"/>
+		</javac>
+	</target>
+
+	<!-- warファイル生成 -->
+	<target depends="compile-project" name="war-project">
+		<war destfile="${war-file}" webxml="${web-xml-file}">
+			<fileset dir="${webapp-path}">
+				<include name="WEB-INF/view/**/*"/>
+				<include name="WEB-INF/struts-config.xml"/>
+				<include name="WEB-INF/validator-rules.xml"/>
+				<!-- werファイルに入れないjspファイルを指定 -->
+				<exclude name="WEB-INF/view/request/createDataRequest/index.jsp"/>
+			</fileset>
+			<lib dir="${webapp-lib-path}"/>
+			<classes dir="${output-class-path}">
+				<!-- werファイルに入れないクラスファイルを指定 -->
+				<exclude name="jp/go/affrc/naro/wgs/action/request/CreateDataRequestAction.*"/>
+				<exclude name="jp/go/affrc/naro/wgs/form/request/CreateDataRequestForm.*"/>
+			</classes>
+		</war>
+	</target>
+</project>

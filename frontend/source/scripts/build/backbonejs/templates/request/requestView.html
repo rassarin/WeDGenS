@@ -1,0 +1,97 @@
+<div id="request_panel" class="panel">
+    <form id="request_form" method="POST">
+
+        <table class="form centering">
+            <caption>リクエスト登録</caption>
+            <tr>
+                <th>ライブラリ選択</th>
+                <td>
+                   <div class="element" id="lib_id_elemnt">
+                       <select id="lib_id" name="lib_id" class="validate-library"></select><span id="lib_id_msg" class="loading"></span>
+                   </div>
+                </td>
+            </tr>
+            <tr>
+                <th>入力データ選択</th>
+                <td>
+                   <fieldset>
+                       <legend><input type="radio" id="data_type_id_metbroker" name="data_type_id" value="2">MetBrokerデータ</legend>
+                       <div class="element" id="source_id_elemnt">
+                           <label>データソースID：</label>
+                           <select id="source_id" name="source_id" class="validate-source"></select>
+                           <span id="source_id_msg" class="loading"></span>
+                       </div>
+                       <div class="element">
+                           <label>観測年(開始)-(終了)：</label>
+                           <input type="text" id="begin_year" name="begin_year" size="8" maxlength="4" class="validate-year"> -
+                           <input type="text" id="end_year"   name="end_year"   size="8" maxlength="4" class="validate-year">
+                       </div>
+                       <div class="element">
+                           <label>デュレーション：</label>
+                           <select id="duration_id" name="duration_id" class="validate-duration">
+                               <option value="daily">日別</option>
+                               <option value="hourly">時別</option>
+                           </select>
+                       </div>
+                       <div class="element">
+                           <label>地点選択：</label>
+                           <div class="element indent2em">
+                               <fieldset>
+                                   <legend><input type="radio" name="range_type_id" value="point">地点指定</legend>
+                                   <div class="element" id="region_id_elemnt">
+                                       <label>リージョン：</label>
+                                       <select id="region_id" name="region_id" class="validate-region">
+                                           <option value="" class="empty">リージョンを選択</option>
+                                       </select>
+                                       <span id="region_id_msg" class="loading"></span>
+                                   </div>
+                                   <div class="element" id="station_id_elemnt">
+                                       <label>ステーション：</label>
+                                       <select id="station_id" name="station_id" class="validate-station">
+                                           <option value="" class="empty">ステーションを選択</option>
+                                       </select>
+                                       <span id="station_id_msg" class="loading"></span>
+                                   </div>
+                               </fieldset>
+                               <fieldset>
+                                   <legend><input type="radio" name="range_type_id" value="area">エリア指定</legend>
+                                   <div class="element">
+                                       <label>北西頂点(緯度, 経度)：</label>
+                                       (<input type="text" name="nw_lat" size="10" maxlength="36" class="validate-latlong"> , <input type="text" name="nw_lon" size="10" maxlength="36" class="validate-latlong">)
+                                   </div>
+                                   <div class="element">
+                                       <label>南東頂点(緯度, 経度)：</label>
+                                       (<input type="text" name="se_lat" size="10" maxlength="36" class="validate-latlong"> , <input type="text" name="se_lon" size="10" maxlength="36" class="validate-latlong">)
+                                   </div>
+                               </fieldset>
+                           </div>
+                       </div>
+                   </fieldset>
+                   <fieldset>
+                       <legend><input type="radio" id="data_type_id_userdata" name="data_type_id" value="1">ユーザデータ</legend>
+                       <div class="element">
+                           <label>ユーザデータID：</label><input id="user_data_id" type="text" name="user_data_id" size="36" maxlength="36" class="validate-user_data_id">
+                           <button id="open_dialog_btn">データ登録画面を開く</button>
+                       </div>
+                   </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <th>パラメータ入力</th>
+                <td>
+                    <div class="element" id="lib_params">ライブラリを選択してください。</div>
+                    <div class="element" id="lib_params_msg" class="loading"></div>
+                </td>
+            </tr>
+        </table>
+        <div class="button_panel">
+            <input id="reset_btn"  class="width100px" type="reset"  name="reset"  value="リセット">
+            <input id="submit_btn" class="width200px" type="submit" name="submit" value="リクエスト登録">
+            <span id="send_request_msg" class="loading"></span>
+        </div>
+    </form>
+</div>
+<div id="userdata_dialog"></div>
+<div id="result_dialog"></div>
+<div id="upload_result_dialog"></div>
+<div id="alert_dialog"></div>

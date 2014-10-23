@@ -1,0 +1,1529 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class App_Xml</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> App_Xml</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">App_Xml クラス</p>
+<p class="description"><p>XML操作クラス</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Mitsubishi Space Software Co.,Ltd.</li>
+				<li><span class="field">abstract:</span> </li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_library---App---Xml.php.html">/library/App/Xml.php</a> (line <span class="field">24</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../Model/Api_Model_Xml_GetLibraryList.html">Api_Model_Xml_GetLibraryList</a>
+					</td>
+					<td>
+											Api_Model_Xml_GetLibraryList クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../Model/Api_Model_Xml_RegisterData.html">Api_Model_Xml_RegisterData</a>
+					</td>
+					<td>
+											Api_Model_Xml_RegisterData クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../Model/Api_Model_Xml_GetDataTypeList.html">Api_Model_Xml_GetDataTypeList</a>
+					</td>
+					<td>
+											Api_Model_Xml_GetDataTypeList クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../Model/Api_Model_Xml_SendRequest.html">Api_Model_Xml_SendRequest</a>
+					</td>
+					<td>
+											Api_Model_Xml_SendRequest クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../Model/Api_Model_Xml_MetXml.html">Api_Model_Xml_MetXml</a>
+					</td>
+					<td>
+											Api_Model_Xml_MetXml クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../Model/Api_Model_Xml_GetSourceList.html">Api_Model_Xml_GetSourceList</a>
+					</td>
+					<td>
+											Api_Model_Xml_GetSourceList クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../Model/Api_Model_Xml_GetRegionList.html">Api_Model_Xml_GetRegionList</a>
+					</td>
+					<td>
+											Api_Model_Xml_GetRegionList クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../Model/Api_Model_Xml_GetResult.html">Api_Model_Xml_GetResult</a>
+					</td>
+					<td>
+											Api_Model_Xml_GetResult クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../Model/Api_Model_Xml_CheckRequest.html">Api_Model_Xml_CheckRequest</a>
+					</td>
+					<td>
+											Api_Model_Xml_CheckRequest クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../Model/Api_Model_Xml_Notification.html">Api_Model_Xml_Notification</a>
+					</td>
+					<td>
+											Api_Model_Xml_Notification クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../Model/Api_Model_Xml_GetParamList.html">Api_Model_Xml_GetParamList</a>
+					</td>
+					<td>
+											Api_Model_Xml_GetParamList クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../Model/Api_Model_Xml_GetStationList.html">Api_Model_Xml_GetStationList</a>
+					</td>
+					<td>
+											Api_Model_Xml_GetStationList クラス
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#NS_XSI" title="details" class="const-name">NS_XSI</a> = 					<span class="var-type"> 'http://www.w3.org/2001/XMLSchema-instance'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#SCEMA_LOCATION" title="details" class="const-name">SCEMA_LOCATION</a> = 					<span class="var-type"> 'http://pc105.narc.affrc.go.jp/wgs/schema/wgsxml.xsd'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#WGS_ROOT_TAG" title="details" class="const-name">WGS_ROOT_TAG</a> = 					<span class="var-type"> 'wgs'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">SimpleXMLElement</span>
+					<a href="#$_simplexml_document" title="details" class="var-name">$_simplexml_document</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">XSLTProcessor</span>
+					<a href="#$_xsltProcessor" title="details" class="var-name">$_xsltProcessor</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																			
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">DOMDocument</span>
+										<a href="#errorXml" title="details" class="method-name">errorXml</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#formatXml" title="details" class="method-name">formatXml</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$xml</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$trim</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#genDOMDocument" title="details" class="method-name">genDOMDocument</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$rootTag</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#genDOMDocumentNS" title="details" class="method-name">genDOMDocumentNS</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$rootTag</span>)
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">DOMDocument</span>
+										<a href="#getDOMDocumentFromXml" title="details" class="method-name">getDOMDocumentFromXml</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$xml</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$ns</span> = <span class="var-default">null</span>])
+									</div>
+																															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../Xml/App_Xml.html">App_Xml</a></span>
+										<a href="#getXmlModelClass" title="details" class="method-name">getXmlModelClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getXmlModelClassName" title="details" class="method-name">getXmlModelClassName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$dataName</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../Xml/App_Xml.html">App_Xml</a></span>
+										<a href="#getXmlModuleModelClass" title="details" class="method-name">getXmlModuleModelClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getXmlModuleModelClassName" title="details" class="method-name">getXmlModuleModelClassName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$dataName</span>)
+									</div>
+																															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">DOMDocument</span>
+										<a href="#notifyXml" title="details" class="method-name">notifyXml</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+																																																															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#validateXml" title="details" class="method-name">validateXml</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$xml</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$xsdFile</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#validateXmlDom" title="details" class="method-name">validateXmlDom</a>
+											(<span class="var-type">DOMDocument</span>&nbsp;<span class="var-name">$dom</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$xsdFile</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#validateXmlFile" title="details" class="method-name">validateXmlFile</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$xml</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$xsdFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$xmlFile</span>)
+									</div>
+																			
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$xml</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ns</span> = <span class="var-default">null</span>])
+									</div>
+																																															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">DOMDocument</span>
+										<a href="#getDOM" title="details" class="method-name">getDOM</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">SimpleXMLElement</span>
+										<a href="#getSimpleXMLDocument" title="details" class="method-name">getSimpleXMLDocument</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getXml" title="details" class="method-name">getXml</a>
+										()
+									</div>
+																																															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">XSLTProcessor</span>
+										<a href="#getXSLTProcessor" title="details" class="method-name">getXSLTProcessor</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/AbstractMethod.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#init" title="details" class="method-name">init</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">mixed</span>
+										<a href="#searchXpath" title="details" class="method-name">searchXpath</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setSimpleXMLDocument" title="details" class="method-name">setSimpleXMLDocument</a>
+											(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setStyleSheet" title="details" class="method-name">setStyleSheet</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$xslFile</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setXml" title="details" class="method-name">setXml</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$xml</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$ns</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setXSLTProcessor" title="details" class="method-name">setXSLTProcessor</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">String</span>
+										<a href="#transform" title="details" class="method-name">transform</a>
+											(<span class="var-type">DOMDocument</span>&nbsp;<span class="var-name">$xmlDoc</span>)
+									</div>
+																																			</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$_simplexml_document" id="$_simplexml_document"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">SimpleXMLElement</span>
+			<span class="var-name">$_simplexml_document</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">48</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SimpleXMLドキュメント</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_xsltProcessor" id="$_xsltProcessor"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">XSLTProcessor</span>
+			<span class="var-name">$_xsltProcessor</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">57</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XSLTProcessorインスタンス</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methoderrorXml" id="errorXml"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static errorXml</span> (line <span class="line-number">400</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">エラーXML DOMの生成</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> DOMDocumentオブジェクト</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">DOMDocument</span>
+		<span class="method-name">
+			errorXml
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodformatXml" id="formatXml"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static formatXml</span> (line <span class="line-number">356</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XMLの整形</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> XML文字列</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			formatXml
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$xml</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$trim</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$xml</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$trim</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgenDOMDocument" id="genDOMDocument"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static genDOMDocument</span> (line <span class="line-number">247</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">DOMDocumentオブジェクトの生成</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ルートノードのタグ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			genDOMDocument
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$rootTag</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$rootTag</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgenDOMDocumentNS" id="genDOMDocumentNS"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static genDOMDocumentNS</span> (line <span class="line-number">266</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">DOMDocumentオブジェクト(名前空間使用)の生成</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ルートノードのタグ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			genDOMDocumentNS
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$rootTag</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$rootTag</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetDOMDocumentFromXml" id="getDOMDocumentFromXml"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getDOMDocumentFromXml</span> (line <span class="line-number">233</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XML文字列からDOMDocumentオブジェクトの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> DOMDocumentオブジェクト</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">DOMDocument</span>
+		<span class="method-name">
+			getDOMDocumentFromXml
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$xml</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$ns</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xml</span><span class="var-description">: XML文字列</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ns</span><span class="var-description">: 名前空間</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetXmlModelClass" id="getXmlModelClass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getXmlModelClass</span> (line <span class="line-number">419</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モデル名からモデルクラスを生成する</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> XMLモデルクラス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../Xml/App_Xml.html">App_Xml</a></span>
+		<span class="method-name">
+			getXmlModelClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$modelName</span><span class="var-description">: モデル名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetXmlModelClassName" id="getXmlModelClassName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getXmlModelClassName</span> (line <span class="line-number">435</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モデル名からXMLクラス名を取得する</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> XMLクラス名</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getXmlModelClassName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$dataName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dataName</span><span class="var-description">: モデル名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetXmlModuleModelClass" id="getXmlModuleModelClass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getXmlModuleModelClass</span> (line <span class="line-number">452</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モデル名からモジュールモデルクラスを生成する</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> XMLモデルクラス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../Xml/App_Xml.html">App_Xml</a></span>
+		<span class="method-name">
+			getXmlModuleModelClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$moduleName</span><span class="var-description">: モジュール名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$modelName</span><span class="var-description">: モデル名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetXmlModuleModelClassName" id="getXmlModuleModelClassName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getXmlModuleModelClassName</span> (line <span class="line-number">469</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モデル名からモジュールXMLクラス名を取得する</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> XMLクラス名</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getXmlModuleModelClassName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$dataName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$moduleName</span><span class="var-description">: モジュール名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dataName</span><span class="var-description">: モデル名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodnotifyXml" id="notifyXml"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static notifyXml</span> (line <span class="line-number">381</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">通知XML DOMの生成</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> DOMDocumentオブジェクト</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">DOMDocument</span>
+		<span class="method-name">
+			notifyXml
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: 通知メッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateXml" id="validateXml"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static validateXml</span> (line <span class="line-number">336</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XMLSchemaによるバリデーション</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリーデート結果</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			validateXml
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$xml</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$xsdFile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xml</span><span class="var-description">: XML文字列</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xsdFile</span><span class="var-description">: XSDファイル</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateXmlDom" id="validateXmlDom"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static validateXmlDom</span> (line <span class="line-number">316</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XMLSchemaによるバリデーション</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリーデート結果</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			validateXmlDom
+		</span>
+					(<span class="var-type">DOMDocument</span>&nbsp;<span class="var-name">$dom</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$xsdFile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">DOMDocument</span>
+				<span class="var-name">$dom</span><span class="var-description">: DOMDocumentオブジェクト</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xsdFile</span><span class="var-description">: XSDファイル</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateXmlFile" id="validateXmlFile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static validateXmlFile</span> (line <span class="line-number">296</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XMLSchemaによるXMLファイルの妥当性チェック</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 真：XMLSchemaによる妥当性チェックOK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			validateXmlFile
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$xml</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$xsdFile</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$xmlFile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xmlFile</span><span class="var-description">: XMLファイルパス</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xsdFile</span><span class="var-description">: XMLSchemaファイルパス</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$xml</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">68</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンストラクタ</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$xml</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$ns</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xml</span><span class="var-description">: XMLドキュメント</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ns</span><span class="var-description">: 名前空間</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetDOM" id="getDOM"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getDOM</span> (line <span class="line-number">151</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SimpleXMLオブジェクトからDOMDocumentオブジェクトを取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> DOMDocumentオブジェクト</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">DOMDocument</span>
+		<span class="method-name">
+			getDOM
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSimpleXMLDocument" id="getSimpleXMLDocument"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getSimpleXMLDocument</span> (line <span class="line-number">108</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SimpleXMLドキュメントの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> SimpleXMLドキュメント</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">SimpleXMLElement</span>
+		<span class="method-name">
+			getSimpleXMLDocument
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetXml" id="getXml"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getXml</span> (line <span class="line-number">135</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XMLの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> XML文字列</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getXml
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetXSLTProcessor" id="getXSLTProcessor"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getXSLTProcessor</span> (line <span class="line-number">175</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XSLTProcessorインスタンスの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> XSLTProcessorインスタンス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">XSLTProcessor</span>
+		<span class="method-name">
+			getXSLTProcessor
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodinit" id="init"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/AbstractMethod.png" />
+		<span class="method-title">init</span> (line <span class="line-number">86</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">初期化メソッド  ：抽象メソッド</p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			init
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../Model/Api_Model_Xml_GetLibraryList.html#methodinit">Api_Model_Xml_GetLibraryList::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Model/Api_Model_Xml_RegisterData.html#methodinit">Api_Model_Xml_RegisterData::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Model/Api_Model_Xml_GetDataTypeList.html#methodinit">Api_Model_Xml_GetDataTypeList::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Model/Api_Model_Xml_SendRequest.html#methodinit">Api_Model_Xml_SendRequest::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Model/Api_Model_Xml_MetXml.html#methodinit">Api_Model_Xml_MetXml::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Model/Api_Model_Xml_GetSourceList.html#methodinit">Api_Model_Xml_GetSourceList::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Model/Api_Model_Xml_GetRegionList.html#methodinit">Api_Model_Xml_GetRegionList::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Model/Api_Model_Xml_GetResult.html#methodinit">Api_Model_Xml_GetResult::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Model/Api_Model_Xml_CheckRequest.html#methodinit">Api_Model_Xml_CheckRequest::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Model/Api_Model_Xml_Notification.html#methodinit">Api_Model_Xml_Notification::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Model/Api_Model_Xml_GetParamList.html#methodinit">Api_Model_Xml_GetParamList::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Model/Api_Model_Xml_GetStationList.html#methodinit">Api_Model_Xml_GetStationList::init()</a>
+								: 初期化メソッド
+							</li>
+				</ul>
+	</div>
+<a name="methodsearchXpath" id="searchXpath"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">searchXpath</span> (line <span class="line-number">219</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XPathクエリーの実行</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> XPath検索結果</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			searchXpath
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: XPathクエリー</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSimpleXMLDocument" id="setSimpleXMLDocument"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setSimpleXMLDocument</span> (line <span class="line-number">96</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SimpleXMLドキュメントのセット</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setSimpleXMLDocument
+		</span>
+					(<span class="var-type">SimpleXMLElement</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">SimpleXMLElement</span>
+				<span class="var-name">$value</span><span class="var-description">: SimpleXMLドキュメント</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetStyleSheet" id="setStyleSheet"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setStyleSheet</span> (line <span class="line-number">191</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XSLTProcessorインスタンスの取得</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setStyleSheet
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$xslFile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xslFile</span><span class="var-description">: XSLTスタイルシートファイル</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetXml" id="setXml"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setXml</span> (line <span class="line-number">122</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XMLのセット</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setXml
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$xml</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$ns</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xml</span><span class="var-description">: XML文字列</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$ns</span><span class="var-description">: 名前空間</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetXSLTProcessor" id="setXSLTProcessor"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setXSLTProcessor</span> (line <span class="line-number">163</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XSLTProcessorインスタンスのセット</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setXSLTProcessor
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtransform" id="transform"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">transform</span> (line <span class="line-number">206</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XSLT適用後文字列の取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> XSLT適用後文字列</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			transform
+		</span>
+					(<span class="var-type">DOMDocument</span>&nbsp;<span class="var-name">$xmlDoc</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">DOMDocument</span>
+				<span class="var-name">$xmlDoc</span><span class="var-description">: DOMDocumentオブジェクト</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constNS_XSI" id="NS_XSI"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">NS_XSI</span>
+			 = <span class="const-default"> 'http://www.w3.org/2001/XMLSchema-instance'</span>
+			(line <span class="line-number">34</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">名前空間：xsi</p>
+	
+	
+</div>
+<a name="constSCEMA_LOCATION" id="SCEMA_LOCATION"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">SCEMA_LOCATION</span>
+			 = <span class="const-default"> 'http://pc105.narc.affrc.go.jp/wgs/schema/wgsxml.xsd'</span>
+			(line <span class="line-number">29</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">xsi:schemaLocation</p>
+	
+	
+</div>
+<a name="constWGS_ROOT_TAG" id="WGS_ROOT_TAG"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">WGS_ROOT_TAG</span>
+			 = <span class="const-default"> 'wgs'</span>
+			(line <span class="line-number">39</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">WGSレスポンスXMLルートタグ</p>
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 27 Mar 2014 17:37:29 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+	</p>
+	</div></body>
+</html>

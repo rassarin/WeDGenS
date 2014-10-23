@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="sources">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="source" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="regions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="source" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="stations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="source" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="source">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="area" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="region" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="station" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="region">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="area" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="station" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="station">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="place"/>
+        <xs:element ref="operational" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="elements" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="station-info">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="source"/>
+        <xs:element ref="id"/>
+        <xs:element ref="name"/>
+        <xs:element ref="place"/>
+        <xs:element ref="operational"/>
+        <xs:element ref="elements"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="id" type="xs:string"/>
+  <xs:element name="data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="source"/>
+        <xs:element ref="region" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="station"/>
+        <xs:element ref="interval"/>
+        <xs:element ref="duration"/>
+        <xs:element ref="element" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="name">
+    <xs:complexType mixed="true">
+      <xs:attribute name="lang" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="area">
+    <xs:complexType>
+      <xs:attribute name="nw_lat" type="xs:double" use="required"/>
+      <xs:attribute name="nw_lon" type="xs:double" use="required"/>
+      <xs:attribute name="se_lat" type="xs:double" use="required"/>
+      <xs:attribute name="se_lon" type="xs:double" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="place">
+    <xs:complexType>
+      <xs:attribute name="lat" type="xs:double" use="required"/>
+      <xs:attribute name="lon" type="xs:double" use="required"/>
+      <xs:attribute name="alt" type="xs:double" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="operational">
+    <xs:complexType>
+      <xs:attribute name="start" type="xs:string" use="required"/>
+      <xs:attribute name="end" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="interval">
+    <xs:complexType>
+      <xs:attribute name="start" type="xs:string" use="required"/>
+      <xs:attribute name="end" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="elements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="element" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="element">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="duration" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="subelement" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="duration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="subelement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="name" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="value" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+      <xs:attribute name="unit" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="value">
+    <xs:complexType mixed="true">
+      <xs:attribute name="date" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,22 @@
+<div id="error_panel">
+    <article id="error_message">
+        <h1>エラーが発生しました。</h1>
+        <p><?php echo $this->message ?></p>
+        <?php if (isset($this->exception)): ?>
+            <section>
+                <h2>Exception information:</h2>
+                <p>
+                    <b>Message:</b> <?php echo $this->exception->getMessage() ?>
+                </p>
+            </section>
+            <section>
+                <h2>Stack trace:</h2>
+                <pre><?php echo $this->exception->getTraceAsString() ?></pre>
+            </section>
+            <section>
+                <h2>Request Parameters:</h2>
+                <pre><?php echo var_export($this->request->getParams(), true) ?></pre>
+            </section>
+        <?php endif ?>
+    </article>
+</div>

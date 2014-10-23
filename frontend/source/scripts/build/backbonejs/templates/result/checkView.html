@@ -1,0 +1,28 @@
+<div id="result_panel" class="panel">
+    <form id="check_form" method="POST">
+
+        <table class="form centering">
+            <caption>リクエスト実行結果ダウンロード</caption>
+            <tr>
+                <th>リクエストID入力</th>
+                <td>
+                   <div class="element" id="request_id_elemnt">
+                       <input id="request_id" type="text" name="request_id" size="40" maxlength="36" class="validate-uuid validate-required">
+                   </div>
+                </td>
+            </tr>
+            <tr>
+                <th>実行状況</th>
+                <td>
+                   <div class="element" id="status_elemnt">リクエストIDを入力してください。</div>
+                   <div class="element" id="download_element"></div>
+                </td>
+            </tr>
+        </table>
+        <div class="button_panel">
+            <input id="reset_btn"  class="width100px" type="reset"  name="reset"  value="リセット">
+            <input id="submit_btn" class="width200px" type="submit" name="submit" value="実行結果問い合わせ">
+        </div>
+    </form>
+</div>
+<div id="tmp_box"></div>

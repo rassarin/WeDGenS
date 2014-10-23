@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class App_Controller_Action_Helper_Log</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> App_Controller_Action_Helper_Log</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">App_Controller_Action_Helper_Log クラス</p>
+<p class="description"><p>Appログ出力ヘルパー基底クラス</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Mitsubishi Space Software Co.,Ltd.</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_library---App---Controller---Action---Helper---Log.php.html">/library/App/Controller/Action/Helper/Log.php</a> (line <span class="field">28</span>)
+		</p>
+		
+				
+		<pre>Zend_Controller_Action_Helper_Abstract
+   |
+   --App_Controller_Action_Helper_Log</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Log_UiLog.html">Helper_Log_UiLog</a>
+					</td>
+					<td>
+											Helper_Log_UiLog クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Log_IndexLog.html">Helper_Log_IndexLog</a>
+					</td>
+					<td>
+											Helper_Log_IndexLog クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Log_ApiGetResultLog.html">Helper_Api_Log_ApiGetResultLog</a>
+					</td>
+					<td>
+											Helper_Api_Log_ApiGetResultLog クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Log_ApiIndexLog.html">Helper_Api_Log_ApiIndexLog</a>
+					</td>
+					<td>
+											Helper_Api_Log_ApiIndexLog クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Log_ApiGetLibraryListLog.html">Helper_Api_Log_ApiGetLibraryListLog</a>
+					</td>
+					<td>
+											Helper_Api_Log_ApiGetLibraryListLog クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Log_ApiRegisterDataLog.html">Helper_Api_Log_ApiRegisterDataLog</a>
+					</td>
+					<td>
+											Helper_Api_Log_ApiRegisterDataLog クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Log_ApiAuthLog.html">Helper_Api_Log_ApiAuthLog</a>
+					</td>
+					<td>
+											Helper_Api_Log_ApiAuthLog クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Log_ApiGetSourceListLog.html">Helper_Api_Log_ApiGetSourceListLog</a>
+					</td>
+					<td>
+											Helper_Api_Log_ApiGetSourceListLog クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Log_ApiSendRequestLog.html">Helper_Api_Log_ApiSendRequestLog</a>
+					</td>
+					<td>
+											Helper_Api_Log_ApiSendRequestLog クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Log_ApiGetRegionListLog.html">Helper_Api_Log_ApiGetRegionListLog</a>
+					</td>
+					<td>
+											Helper_Api_Log_ApiGetRegionListLog クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Log_ApiGetDataTypeListLog.html">Helper_Api_Log_ApiGetDataTypeListLog</a>
+					</td>
+					<td>
+											Helper_Api_Log_ApiGetDataTypeListLog クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Log_ApiGetParamListLog.html">Helper_Api_Log_ApiGetParamListLog</a>
+					</td>
+					<td>
+											Helper_Api_Log_ApiGetParamListLog クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Log_ApiGetStationListLog.html">Helper_Api_Log_ApiGetStationListLog</a>
+					</td>
+					<td>
+											Helper_Api_Log_ApiGetStationListLog クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Log_ApiCheckRequestLog.html">Helper_Api_Log_ApiCheckRequestLog</a>
+					</td>
+					<td>
+											Helper_Api_Log_ApiCheckRequestLog クラス
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_messages" title="details" class="var-name">$_messages</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#access" title="details" class="method-name">access</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#critical" title="details" class="method-name">critical</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$exception</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>], <span class="var-type"><a href="../../Exception/App_Exception.html">App_Exception</a>|string</span>&nbsp;<span class="var-name">$excption</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#debug" title="details" class="method-name">debug</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Controller/ActionHelper/App_Controller_Action_Helper_Acl.html">App_Controller_Action_Helper_Acl</a></span>
+										<a href="#direct" title="details" class="method-name">direct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#dump" title="details" class="method-name">dump</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$label</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#error" title="details" class="method-name">error</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$exception</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>], <span class="var-type"><a href="../../Exception/App_Exception.html">App_Exception</a>|string</span>&nbsp;<span class="var-name">$excption</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#exceptionMessage" title="details" class="method-name">exceptionMessage</a>
+											(<span class="var-type">Exception</span>&nbsp;<span class="var-name">$exception</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Log/App_Log_Access.html">App_Log_Access</a>|boolean</span>
+										<a href="#getAccessLogger" title="details" class="method-name">getAccessLogger</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Log/App_Log_Error.html">App_Log_Error</a>|boolean</span>
+										<a href="#getErrorLogger" title="details" class="method-name">getErrorLogger</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getName" title="details" class="method-name">getName</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#notice" title="details" class="method-name">notice</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#validateMessage" title="details" class="method-name">validateMessage</a>
+											(<span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#warning" title="details" class="method-name">warning</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$exception</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>], <span class="var-type"><a href="../../Exception/App_Exception.html">App_Exception</a>|string</span>&nbsp;<span class="var-name">$excption</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$_messages" id="$_messages"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_messages</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">35</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ログメッセージ</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodaccess" id="access"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">access</span> (line <span class="line-number">70</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">アクセスログの出力(ログ出力プライオリティ：App_Log::INFO)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			access
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: 詳細メッセージ</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$code</span><span class="var-description">: ログ番号</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcritical" id="critical"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">critical</span> (line <span class="line-number">130</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">エラーログの出力(ログ出力プライオリティ：App_Log::CRIT)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			critical
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$exception</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>], <span class="var-type"><a href="../../Exception/App_Exception.html">App_Exception</a>|string</span>&nbsp;<span class="var-name">$excption</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Exception/App_Exception.html">App_Exception</a>|string</span>
+				<span class="var-name">$excption</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$code</span><span class="var-description">: ログ番号</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$exception</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddebug" id="debug"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">debug</span> (line <span class="line-number">110</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">アクセスログの出力(ログ出力プライオリティ：App_Log::DEBUG)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			debug
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: 詳細メッセージ</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$code</span><span class="var-description">: ログ番号</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddirect" id="direct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">direct</span> (line <span class="line-number">44</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ヘルパーデフォルトメソッド</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> アクセス制御ヘルパー</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Controller/ActionHelper/App_Controller_Action_Helper_Acl.html">App_Controller_Action_Helper_Acl</a></span>
+		<span class="method-name">
+			direct
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddump" id="dump"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">dump</span> (line <span class="line-number">181</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">デバッグ情報の出力(ログ出力プライオリティ：App_Log::DEBUG)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			dump
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$label</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: 値</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$label</span><span class="var-description">: メッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoderror" id="error"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">error</span> (line <span class="line-number">147</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">エラーログの出力(ログ出力プライオリティ：App_Log::ERR)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			error
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$exception</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>], <span class="var-type"><a href="../../Exception/App_Exception.html">App_Exception</a>|string</span>&nbsp;<span class="var-name">$excption</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Exception/App_Exception.html">App_Exception</a>|string</span>
+				<span class="var-name">$excption</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$code</span><span class="var-description">: ログ番号</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$exception</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodexceptionMessage" id="exceptionMessage"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">exceptionMessage</span> (line <span class="line-number">210</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">例外キャッチエラーログの出力(ログ出力プライオリティ：App_Log::WARN)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			exceptionMessage
+		</span>
+					(<span class="var-type">Exception</span>&nbsp;<span class="var-name">$exception</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Exception</span>
+				<span class="var-name">$exception</span><span class="var-description">: 例外</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAccessLogger" id="getAccessLogger"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getAccessLogger</span> (line <span class="line-number">222</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">アクセスログインスタンスの取得</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Log/App_Log_Access.html">App_Log_Access</a>|boolean</span>
+		<span class="method-name">
+			getAccessLogger
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetErrorLogger" id="getErrorLogger"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getErrorLogger</span> (line <span class="line-number">240</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">エラーログインスタンスの取得</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Log/App_Log_Error.html">App_Log_Error</a>|boolean</span>
+		<span class="method-name">
+			getErrorLogger
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetName" id="getName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getName</span> (line <span class="line-number">56</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ヘルパー名の取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ヘルパー名</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getName
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Controller/Helper/Helper_Log_UiLog.html#methodgetName">Helper_Log_UiLog::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Log_IndexLog.html#methodgetName">Helper_Log_IndexLog::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Log_ApiGetResultLog.html#methodgetName">Helper_Api_Log_ApiGetResultLog::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Log_ApiIndexLog.html#methodgetName">Helper_Api_Log_ApiIndexLog::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Log_ApiGetLibraryListLog.html#methodgetName">Helper_Api_Log_ApiGetLibraryListLog::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Log_ApiRegisterDataLog.html#methodgetName">Helper_Api_Log_ApiRegisterDataLog::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Log_ApiAuthLog.html#methodgetName">Helper_Api_Log_ApiAuthLog::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Log_ApiGetSourceListLog.html#methodgetName">Helper_Api_Log_ApiGetSourceListLog::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Log_ApiSendRequestLog.html#methodgetName">Helper_Api_Log_ApiSendRequestLog::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Log_ApiGetRegionListLog.html#methodgetName">Helper_Api_Log_ApiGetRegionListLog::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Log_ApiGetDataTypeListLog.html#methodgetName">Helper_Api_Log_ApiGetDataTypeListLog::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Log_ApiGetParamListLog.html#methodgetName">Helper_Api_Log_ApiGetParamListLog::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Log_ApiGetStationListLog.html#methodgetName">Helper_Api_Log_ApiGetStationListLog::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Log_ApiCheckRequestLog.html#methodgetName">Helper_Api_Log_ApiCheckRequestLog::getName()</a>
+								: ヘルパー名の取得
+							</li>
+				</ul>
+	</div>
+<a name="methodnotice" id="notice"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">notice</span> (line <span class="line-number">90</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">アクセスログの出力(ログ出力プライオリティ：App_Log::NOTICE)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			notice
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: 詳細メッセージ</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$code</span><span class="var-description">: ログ番号</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateMessage" id="validateMessage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">validateMessage</span> (line <span class="line-number">194</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">バリデートエラーの出力(ログ出力プライオリティ：App_Log::WARN)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			validateMessage
+		</span>
+					(<span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Zend_Filter_Input</span>
+				<span class="var-name">$input</span><span class="var-description">: ユーザ入力値</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwarning" id="warning"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">warning</span> (line <span class="line-number">164</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">エラーログの出力(ログ出力プライオリティ：App_Log::WARN)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			warning
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$exception</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>], <span class="var-type"><a href="../../Exception/App_Exception.html">App_Exception</a>|string</span>&nbsp;<span class="var-name">$excption</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../Exception/App_Exception.html">App_Exception</a>|string</span>
+				<span class="var-name">$excption</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$code</span><span class="var-description">: ログ番号</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$exception</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 27 Mar 2014 17:37:22 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+	</p>
+	</div></body>
+</html>

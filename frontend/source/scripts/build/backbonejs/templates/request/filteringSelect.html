@@ -1,0 +1,33 @@
+<script>
+$(function () {
+    var items = <% print(JSON.stringify(child_items)) %>;
+
+    var parentId = '#<%- parent_id %>';
+
+    var childId  = '#<%- child_id %>';
+
+    $(parentId).change(function(){
+
+        var selected = $(parentId + ' option:selected').attr('value');
+
+        if (selected && selected.length) {
+
+            $(childId).empty();
+
+            var updateItems = items[selected];
+
+            _.each(updateItems, function(item) {
+
+                var optionItem = $("<option>").attr("value", _.escape(item.key))
+                                              .html(_.escape(item.value));
+
+                $(childId).append(optionItem);
+
+            });
+
+        }
+
+    });
+});
+</script>
+

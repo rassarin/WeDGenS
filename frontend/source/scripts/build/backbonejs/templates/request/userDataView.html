@@ -1,0 +1,27 @@
+<div id="user_data_panel" class="panel">
+    <form id="upload_form" enctype="multipart/form-data" method="POST">
+        <table class="form centering">
+            <caption>データ登録</caption>
+            <tr>
+                <th>アップロードファイル選択</th>
+                <td>
+                   <div class="element" id="request_id_elemnt">
+                       <input type="file" name="xml_file" id="xml_file" class="validate-xml_file">
+                       <span id="upload_msg" class="loading"></span>
+                   </div>
+                </td>
+            </tr>
+            <tr>
+                <th>ユーザデータ情報入力</th>
+                <td>
+                   <div class="element" id="request_id_elemnt">
+                       <label>データ名：</label><input type="text" name="data_name" id="data_name" value="" class="validate-data_name">
+                   </div>
+                   <div class="element" id="request_id_elemnt">
+                       <label>コメント：</label><input type="text" name="comment" id="comment" value="" class="validate-comment">
+                   </div>
+               </td>
+            </tr>
+        </table>
+    </form>
+</div>

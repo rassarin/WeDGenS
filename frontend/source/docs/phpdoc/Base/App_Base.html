@@ -1,0 +1,1290 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class App_Base</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> App_Base</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">App_Base クラス</p>
+<p class="description"><p>アプリケーション基本機能抽象クラス</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Mitsubishi Space Software Co.,Ltd.</li>
+				<li><span class="field">abstract:</span> </li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_library---App---Base.php.html">/library/App/Base.php</a> (line <span class="field">23</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/AbstractClass.png"
+								 alt="Abstract class"
+								 title="Abstract class"
+								 style="vertical-align: center"/>
+						<a href="../Model/App_Model.html">App_Model</a>
+					</td>
+					<td>
+											App_Model クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/AbstractClass.png"
+								 alt="Abstract class"
+								 title="Abstract class"
+								 style="vertical-align: center"/>
+						<a href="../Service/App_Service.html">App_Service</a>
+					</td>
+					<td>
+											App_Service クラス
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_config" title="details" class="var-name">$_config</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">array</span>
+					<a href="#$_externalFileConfig" title="details" class="var-name">$_externalFileConfig</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">string</span>
+					<a href="#$_module" title="details" class="var-name">$_module</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																															
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#accessLog" title="details" class="method-name">accessLog</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#criticalLog" title="details" class="method-name">criticalLog</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$exception</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>], <span class="var-type"><a href="../Exception/App_Exception.html">App_Exception</a>|string</span>&nbsp;<span class="var-name">$excption</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#debugLog" title="details" class="method-name">debugLog</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEBUG</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#errorLog" title="details" class="method-name">errorLog</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$exception</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>], <span class="var-type"><a href="../Exception/App_Exception.html">App_Exception</a>|string</span>&nbsp;<span class="var-name">$excption</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../Log/App_Log_Access.html">App_Log_Access</a>|boolean</span>
+										<a href="#getAccessLogger" title="details" class="method-name">getAccessLogger</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Zend_Db_Adapter_Abstract</span>
+										<a href="#getAdapter" title="details" class="method-name">getAdapter</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getConfig" title="details" class="method-name">getConfig</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Zend_Db_Table_Abstract</span>
+										<a href="#getDbTable" title="details" class="method-name">getDbTable</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../Log/App_Log_Error.html">App_Log_Error</a>|boolean</span>
+										<a href="#getErrorLogger" title="details" class="method-name">getErrorLogger</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../Json/App_Json.html">App_Json</a></span>
+										<a href="#getJsonModel" title="details" class="method-name">getJsonModel</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../Json/App_Json.html">App_Json</a></span>
+										<a href="#getJsonModuleModel" title="details" class="method-name">getJsonModuleModel</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Zend_Db_Table_Abstract</span>
+										<a href="#getModel" title="details" class="method-name">getModel</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Zend_Db_Table_Abstract</span>
+										<a href="#getModuleDbTable" title="details" class="method-name">getModuleDbTable</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Zend_Db_Table_Abstract</span>
+										<a href="#getModuleModel" title="details" class="method-name">getModuleModel</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getModuleName" title="details" class="method-name">getModuleName</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../Xml/App_Xml.html">App_Xml</a></span>
+										<a href="#getXmlModel" title="details" class="method-name">getXmlModel</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../Xml/App_Xml.html">App_Xml</a></span>
+										<a href="#getXmlModuleModel" title="details" class="method-name">getXmlModuleModel</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/AbstractMethod.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#init" title="details" class="method-name">init</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#loadPartialConfig" title="details" class="method-name">loadPartialConfig</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$configFile</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$section</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#noticeLog" title="details" class="method-name">noticeLog</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setConfig" title="details" class="method-name">setConfig</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#setModuleName" title="details" class="method-name">setModuleName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#warningLog" title="details" class="method-name">warningLog</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$exception</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>], <span class="var-type"><a href="../Exception/App_Exception.html">App_Exception</a>|string</span>&nbsp;<span class="var-name">$excption</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$_config" id="$_config"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_config</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">32</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">設定</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_externalFileConfig" id="$_externalFileConfig"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_externalFileConfig</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">41</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">外部ファイルパス設定</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_module" id="$_module"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$_module</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">48</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モジュール名</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">57</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">コンストラクタ</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodaccessLog" id="accessLog"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">accessLog</span> (line <span class="line-number">273</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">アクセスログの出力(ログ出力プライオリティ：App_Log::INFO)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			accessLog
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: 詳細メッセージ</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$code</span><span class="var-description">: ログ番号</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcriticalLog" id="criticalLog"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">criticalLog</span> (line <span class="line-number">333</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">エラーログの出力(ログ出力プライオリティ：App_Log::CRIT)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			criticalLog
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$exception</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>], <span class="var-type"><a href="../Exception/App_Exception.html">App_Exception</a>|string</span>&nbsp;<span class="var-name">$excption</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../Exception/App_Exception.html">App_Exception</a>|string</span>
+				<span class="var-name">$excption</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$code</span><span class="var-description">: ログ番号</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$exception</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddebugLog" id="debugLog"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">debugLog</span> (line <span class="line-number">313</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">アクセスログの出力(ログ出力プライオリティ：App_Log::DEBUG)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			debugLog
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEBUG</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: 詳細メッセージ</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$code</span><span class="var-description">: ログ番号</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoderrorLog" id="errorLog"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">errorLog</span> (line <span class="line-number">350</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">エラーログの出力(ログ出力プライオリティ：App_Log::ERR)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			errorLog
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$exception</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>], <span class="var-type"><a href="../Exception/App_Exception.html">App_Exception</a>|string</span>&nbsp;<span class="var-name">$excption</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../Exception/App_Exception.html">App_Exception</a>|string</span>
+				<span class="var-name">$excption</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$code</span><span class="var-description">: ログ番号</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$exception</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAccessLogger" id="getAccessLogger"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAccessLogger</span> (line <span class="line-number">382</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">アクセスログインスタンスの取得</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../Log/App_Log_Access.html">App_Log_Access</a>|boolean</span>
+		<span class="method-name">
+			getAccessLogger
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetAdapter" id="getAdapter"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAdapter</span> (line <span class="line-number">255</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">DBアダプターの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> DBアダプター</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Db_Adapter_Abstract</span>
+		<span class="method-name">
+			getAdapter
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dbName</span><span class="var-description">: DB接続名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetConfig" id="getConfig"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getConfig</span> (line <span class="line-number">93</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">サービス設定の取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> サービス設定</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getConfig
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetDbTable" id="getDbTable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getDbTable</span> (line <span class="line-number">132</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">DbTableモデルの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> DbTableモデルクラス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Db_Table_Abstract</span>
+		<span class="method-name">
+			getDbTable
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tableName</span><span class="var-description">: テーブル名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dbName</span><span class="var-description">: DB接続名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetErrorLogger" id="getErrorLogger"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getErrorLogger</span> (line <span class="line-number">400</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">エラーログインスタンスの取得</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../Log/App_Log_Error.html">App_Log_Error</a>|boolean</span>
+		<span class="method-name">
+			getErrorLogger
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetJsonModel" id="getJsonModel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getJsonModel</span> (line <span class="line-number">225</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Jsonモデルの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> モデルクラス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../Json/App_Json.html">App_Json</a></span>
+		<span class="method-name">
+			getJsonModel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$modelName</span><span class="var-description">: モデル名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetJsonModuleModel" id="getJsonModuleModel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getJsonModuleModel</span> (line <span class="line-number">239</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モジュールモデルの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> モデルクラス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../Json/App_Json.html">App_Json</a></span>
+		<span class="method-name">
+			getJsonModuleModel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$modelName</span><span class="var-description">: モデル名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$moduleName</span><span class="var-description">: モジュール名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetModel" id="getModel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getModel</span> (line <span class="line-number">164</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モデルの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> モデルクラス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Db_Table_Abstract</span>
+		<span class="method-name">
+			getModel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$modelName</span><span class="var-description">: モデル名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dbName</span><span class="var-description">: DB接続名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetModuleDbTable" id="getModuleDbTable"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getModuleDbTable</span> (line <span class="line-number">147</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モジュールDbTableモデルの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> モジュールDbTableモデルクラス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Db_Table_Abstract</span>
+		<span class="method-name">
+			getModuleDbTable
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tableName</span><span class="var-description">: テーブル名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$moduleName</span><span class="var-description">: モジュール名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dbName</span><span class="var-description">: DB接続名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetModuleModel" id="getModuleModel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getModuleModel</span> (line <span class="line-number">179</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モジュールモデルの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> モジュールモデルクラス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Db_Table_Abstract</span>
+		<span class="method-name">
+			getModuleModel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$modelName</span><span class="var-description">: モデル名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$moduleName</span><span class="var-description">: モジュール名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dbName</span><span class="var-description">: DB接続名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetModuleName" id="getModuleName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getModuleName</span> (line <span class="line-number">118</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モジュール名の取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> モジュール名</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getModuleName
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetXmlModel" id="getXmlModel"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getXmlModel</span> (line <span class="line-number">195</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XMLモデルの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> モデルクラス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../Xml/App_Xml.html">App_Xml</a></span>
+		<span class="method-name">
+			getXmlModel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$modelName</span><span class="var-description">: モデル名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetXmlModuleModel" id="getXmlModuleModel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getXmlModuleModel</span> (line <span class="line-number">209</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モジュールモデルの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> モデルクラス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../Xml/App_Xml.html">App_Xml</a></span>
+		<span class="method-name">
+			getXmlModuleModel
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$modelName</span><span class="var-description">: モデル名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$moduleName</span><span class="var-description">: モジュール名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinit" id="init"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/AbstractMethod.png" />
+		<span class="method-title">init</span> (line <span class="line-number">71</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">初期化メソッド  ：抽象メソッド</p>
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			init
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../Model/App_Model.html#methodinit">App_Model::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Service/App_Service.html#methodinit">App_Service::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Service/Service_Search.html#methodinit">Service_Search::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Service/Service_Index.html#methodinit">Service_Index::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Service/Service_Api.html#methodinit">Service_Api::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Service/Api_Service_Auth.html#methodinit">Api_Service_Auth::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Service/Api_Service_Xml.html#methodinit">Api_Service_Xml::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Service/Api_Service_Request.html#methodinit">Api_Service_Request::init()</a>
+								: 初期化メソッド
+							</li>
+					<li>
+				<a href="../Service/Api_Service_Json.html#methodinit">Api_Service_Json::init()</a>
+								: 初期化メソッド
+							</li>
+				</ul>
+	</div>
+<a name="methodloadPartialConfig" id="loadPartialConfig"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">loadPartialConfig</span> (line <span class="line-number">420</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">分割設定ファイルの読み込み</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 設定値</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			loadPartialConfig
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$configFile</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$section</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$configFile</span><span class="var-description">: 設定ファイルパス</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$section</span><span class="var-description">: セクション名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodnoticeLog" id="noticeLog"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">noticeLog</span> (line <span class="line-number">293</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">アクセスログの出力(ログ出力プライオリティ：App_Log::NOTICE)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			noticeLog
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: 詳細メッセージ</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$code</span><span class="var-description">: ログ番号</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetConfig" id="setConfig"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setConfig</span> (line <span class="line-number">81</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">サービス設定のセット</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setConfig
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$config</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$config</span><span class="var-description">: サービス設定</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetModuleName" id="setModuleName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setModuleName</span> (line <span class="line-number">106</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モジュール名のセット</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setModuleName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$moduleName</span><span class="var-description">: モジュール名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwarningLog" id="warningLog"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">warningLog</span> (line <span class="line-number">367</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">エラーログの出力(ログ出力プライオリティ：App_Log::WARN)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			warningLog
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$exception</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$code</span> = <span class="var-default">App_Log::CODE_DEFAULT</span>], <span class="var-type"><a href="../Exception/App_Exception.html">App_Exception</a>|string</span>&nbsp;<span class="var-name">$excption</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../Exception/App_Exception.html">App_Exception</a>|string</span>
+				<span class="var-name">$excption</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$code</span><span class="var-description">: ログ番号</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$exception</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 27 Mar 2014 17:37:12 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+	</p>
+	</div></body>
+</html>

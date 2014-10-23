@@ -1,0 +1,25 @@
+<?php echo $this->partial('partial/_meta.phtml') ?>
+<body>
+    <div id="content-wrapper">
+
+        <?php echo $this->partial(
+            'partial/_header.phtml',
+            array(
+                'pageTitle' => $this->pageTitle
+            )
+        ); ?>
+
+        <div id="content">
+            <?php echo $this->layout()->content ?>
+        </div>
+
+        <?php echo $this->partial(
+            'partial/_footer.phtml',
+            array(
+                'copyright' => $this->copyright
+            )
+        ); ?>
+
+    </div>
+</body>
+<?php echo $this->partial('partial/_bottom.phtml') ?>

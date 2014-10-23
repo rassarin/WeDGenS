@@ -1,0 +1,1898 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class App_Utils</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> App_Utils</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">App_Utils クラス</p>
+<p class="description"><p>共通関数定義クラス。</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Mitsubishi Space Software Co.,Ltd.</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_library---App---Utils.php.html">/library/App/Utils.php</a> (line <span class="field">23</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#CONFIG_CACHE_LIFETIME" title="details" class="const-name">CONFIG_CACHE_LIFETIME</a> = 					<span class="var-type"> 7200</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#PASSWORD_LEN" title="details" class="const-name">PASSWORD_LEN</a> = 					<span class="var-type"> 8</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+									<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#camelCaseToClassName" title="details" class="method-name">camelCaseToClassName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#camelCaseToUnderscore" title="details" class="method-name">camelCaseToUnderscore</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#dashToCamelCase" title="details" class="method-name">dashToCamelCase</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#deleteBOM" title="details" class="method-name">deleteBOM</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#dump" title="details" class="method-name">dump</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$label</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$echo</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#escape" title="details" class="method-name">escape</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#genAccessKey" title="details" class="method-name">genAccessKey</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$mailAddress</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#generateUniqueId" title="details" class="method-name">generateUniqueId</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#generateUUID" title="details" class="method-name">generateUUID</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#genPassword" title="details" class="method-name">genPassword</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Cache</span>
+										<a href="#getConfigCache" title="details" class="method-name">getConfigCache</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$configFile</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$lifeTime</span> = <span class="var-default">self::CONFIG_CACHE_LIFETIME</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">stirng</span>
+										<a href="#getCurrentDate" title="details" class="method-name">getCurrentDate</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">integer</span>
+										<a href="#getCurrentNendo" title="details" class="method-name">getCurrentNendo</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">integer</span>
+										<a href="#getCurrentYear" title="details" class="method-name">getCurrentYear</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">integer</span>
+										<a href="#getDaysOfMonth" title="details" class="method-name">getDaysOfMonth</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Application_Resource_ResourceAbstract</span>
+										<a href="#getDbResource" title="details" class="method-name">getDbResource</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">object</span>
+										<a href="#getForm" title="details" class="method-name">getForm</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$module</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">App_Form</span>
+										<a href="#getModuleForm" title="details" class="method-name">getModuleForm</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$module</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../Service/App_Service.html">App_Service</a></span>
+										<a href="#getModuleService" title="details" class="method-name">getModuleService</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$module</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getNendoBeginDate" title="details" class="method-name">getNendoBeginDate</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$nendo</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getNendoEndDate" title="details" class="method-name">getNendoEndDate</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$nendo</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getNendoEndDate2" title="details" class="method-name">getNendoEndDate2</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$nendo</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">stirng</span>
+										<a href="#getOneMonthAgo" title="details" class="method-name">getOneMonthAgo</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">object</span>
+										<a href="#getReflectionClass" title="details" class="method-name">getReflectionClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../Service/App_Service.html">App_Service</a></span>
+										<a href="#getService" title="details" class="method-name">getService</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../Session/App_Session_Namespace.html">App_Session_Namespace</a></span>
+										<a href="#getSession" title="details" class="method-name">getSession</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">stirng</span>
+										<a href="#getSpecifiedDaysAgo" title="details" class="method-name">getSpecifiedDaysAgo</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">stirng</span>
+										<a href="#getToday" title="details" class="method-name">getToday</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getYearBeginDate" title="details" class="method-name">getYearBeginDate</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$year</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$nendo</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getYearEndDate" title="details" class="method-name">getYearEndDate</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$year</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$nendo</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Date</span>
+										<a href="#getZendDate" title="details" class="method-name">getZendDate</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#isEmpty" title="details" class="method-name">isEmpty</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">boolean</span>
+										<a href="#isLater" title="details" class="method-name">isLater</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$timeStamp1</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$timeStamp2</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Config</span>
+										<a href="#loadConfig" title="details" class="method-name">loadConfig</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$configFile</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$section</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#mbStringLength" title="details" class="method-name">mbStringLength</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#mbStringToArray" title="details" class="method-name">mbStringToArray</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">stirng</span>
+										<a href="#selectedDayBeforeDate" title="details" class="method-name">selectedDayBeforeDate</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span> = <span class="var-default">7</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">stirng</span>
+										<a href="#selectedDayLaterDate" title="details" class="method-name">selectedDayLaterDate</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span> = <span class="var-default">1</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Date</span>
+										<a href="#selectedMonthAgoDate" title="details" class="method-name">selectedMonthAgoDate</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Date</span>
+										<a href="#selectedMonthLaterDate" title="details" class="method-name">selectedMonthLaterDate</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Date</span>
+										<a href="#setZendDate" title="details" class="method-name">setZendDate</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$locale</span> = <span class="var-default">App_Const::DEFAULT_LOCALE</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#sjiswin2utf8" title="details" class="method-name">sjiswin2utf8</a>
+											(<span class="var-type">stirng</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#underscoreToCamelCase" title="details" class="method-name">underscoreToCamelCase</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#utf2sjiswin" title="details" class="method-name">utf2sjiswin</a>
+											(<span class="var-type">stirng</span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+																																																																																																																																																																																																																																																																																																																																																																															</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcamelCaseToClassName" id="camelCaseToClassName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static camelCaseToClassName</span> (line <span class="line-number">474</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FooBar -&gt; Foo_Bar 変換</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 変換後の文字列</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			camelCaseToClassName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: 変換する文字列</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcamelCaseToUnderscore" id="camelCaseToUnderscore"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static camelCaseToUnderscore</span> (line <span class="line-number">448</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FooBar -&gt; foo_bar 変換</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 変換後の文字列</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			camelCaseToUnderscore
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: 変換する文字列</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddashToCamelCase" id="dashToCamelCase"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static dashToCamelCase</span> (line <span class="line-number">399</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">foo-bar -&gt; FooBar 変換</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 変換後の文字列</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			dashToCamelCase
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: 変換する文字列</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteBOM" id="deleteBOM"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static deleteBOM</span> (line <span class="line-number">499</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8 Byte Order Markの除去</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 除去後文字列</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			deleteBOM
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: 対象文字列</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddump" id="dump"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static dump</span> (line <span class="line-number">791</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">error_log()を使用してデバッグ出力する。</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			dump
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$label</span> = <span class="var-default">null</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$echo</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$data</span><span class="var-description">: 出力データ</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$label</span><span class="var-description">: ラベル</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$echo</span><span class="var-description">: 真：標準出力に出力する</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodescape" id="escape"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static escape</span> (line <span class="line-number">574</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">エスケープ処理</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> エスケープ後文字列</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			escape
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$str</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$str</span><span class="var-description">: 対象文字列</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgenAccessKey" id="genAccessKey"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static genAccessKey</span> (line <span class="line-number">540</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">アクセスキーの生成</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> アクセスキー</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			genAccessKey
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$mailAddress</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$mailAddress</span><span class="var-description">: メールアドレス</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span><span class="var-description">: 日時(YYYY-MM-DD hh:mm:ss)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgenerateUniqueId" id="generateUniqueId"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static generateUniqueId</span> (line <span class="line-number">526</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">一意IDの生成</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 一意ID</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			generateUniqueId
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgenerateUUID" id="generateUUID"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static generateUUID</span> (line <span class="line-number">803</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UUIDの生成</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> UUID</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			generateUUID
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgenPassword" id="genPassword"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static genPassword</span> (line <span class="line-number">771</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ランダムなパスワードを生成する。</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			genPassword
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetConfigCache" id="getConfigCache"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getConfigCache</span> (line <span class="line-number">84</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">設定ファイル用キャッシュの取得</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Cache</span>
+		<span class="method-name">
+			getConfigCache
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$configFile</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$lifeTime</span> = <span class="var-default">self::CONFIG_CACHE_LIFETIME</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$configFile</span><span class="var-description">: 設定ファイルパス</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$lifeTime</span><span class="var-description">: キャッシュ有効期間</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetCurrentDate" id="getCurrentDate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getCurrentDate</span> (line <span class="line-number">175</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">現在の日時を取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> YYYY-MM-DD hh:mm:ss</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">stirng</span>
+		<span class="method-name">
+			getCurrentDate
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCurrentNendo" id="getCurrentNendo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getCurrentNendo</span> (line <span class="line-number">143</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">現在の会計年度の取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 会計年度(YYYY)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">integer</span>
+		<span class="method-name">
+			getCurrentNendo
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCurrentYear" id="getCurrentYear"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getCurrentYear</span> (line <span class="line-number">162</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">現在の年の取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 年(YYYY)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">integer</span>
+		<span class="method-name">
+			getCurrentYear
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetDaysOfMonth" id="getDaysOfMonth"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getDaysOfMonth</span> (line <span class="line-number">317</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">指定日付の月の日数の取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 指定日付の月の日数</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">integer</span>
+		<span class="method-name">
+			getDaysOfMonth
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span><span class="var-description">: YYYY-MM-DD</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetDbResource" id="getDbResource"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getDbResource</span> (line <span class="line-number">44</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">データベースリソースの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> データベースリソース</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Application_Resource_ResourceAbstract</span>
+		<span class="method-name">
+			getDbResource
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetForm" id="getForm"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getForm</span> (line <span class="line-number">723</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">「Form_フォーム名」クラスのインスタンス取得</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> Zend_Controller_Action_Helper_Abstract::direct()</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">object</span>
+		<span class="method-name">
+			getForm
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$module</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: フォーム名</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$module</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetModuleForm" id="getModuleForm"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getModuleForm</span> (line <span class="line-number">741</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">「モジュール名_Form_フォーム名」クラスのインスタンス取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> インスタンス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">App_Form</span>
+		<span class="method-name">
+			getModuleForm
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$module</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: フォーム名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$module</span><span class="var-description">: モジュール名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetModuleService" id="getModuleService"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getModuleService</span> (line <span class="line-number">706</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">「モジュール名_Service_サービス名」クラスのインスタンス取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> インスタンス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../Service/App_Service.html">App_Service</a></span>
+		<span class="method-name">
+			getModuleService
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$module</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: サービス名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$module</span><span class="var-description">: モジュール名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetNendoBeginDate" id="getNendoBeginDate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getNendoBeginDate</span> (line <span class="line-number">358</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">年度開始日時を取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 年度開始日時(YYYY-MM-DD hh:mm:ss)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getNendoBeginDate
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$nendo</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$nendo</span><span class="var-description">: 年度</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetNendoEndDate" id="getNendoEndDate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getNendoEndDate</span> (line <span class="line-number">371</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">年度終了日時を取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 年度終了日時(YYYY-MM-DD hh:mm:ss)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getNendoEndDate
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$nendo</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$nendo</span><span class="var-description">: 年度</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetNendoEndDate2" id="getNendoEndDate2"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getNendoEndDate2</span> (line <span class="line-number">385</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">年度終了日時を取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 年度終了日時(YYYY-MM-DD hh:mm:ss)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getNendoEndDate2
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$nendo</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$nendo</span><span class="var-description">: 年度</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetOneMonthAgo" id="getOneMonthAgo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getOneMonthAgo</span> (line <span class="line-number">285</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">今日から１か月前の日付を取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> YYYY-MM-DD</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">stirng</span>
+		<span class="method-name">
+			getOneMonthAgo
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetReflectionClass" id="getReflectionClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getReflectionClass</span> (line <span class="line-number">676</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">「コンポーネント名_クラス名」クラスのインスタンス取得</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> Zend_Controller_Action_Helper_Abstract::direct()</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">object</span>
+		<span class="method-name">
+			getReflectionClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$prefix</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prefix</span><span class="var-description">: コンポーネント名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: クラス名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetService" id="getService"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getService</span> (line <span class="line-number">692</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">「Service_サービス名」クラスのインスタンス取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> インスタンス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../Service/App_Service.html">App_Service</a></span>
+		<span class="method-name">
+			getService
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: サービス名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSession" id="getSession"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getSession</span> (line <span class="line-number">757</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">「App_Session_Namespace_Appセッション名」クラスのインスタンス取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> インスタンス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../Session/App_Session_Namespace.html">App_Session_Namespace</a></span>
+		<span class="method-name">
+			getSession
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: セッション名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSpecifiedDaysAgo" id="getSpecifiedDaysAgo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getSpecifiedDaysAgo</span> (line <span class="line-number">301</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">今日からn日前の日付を取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> YYYY-MM-DD</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">stirng</span>
+		<span class="method-name">
+			getSpecifiedDaysAgo
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$n</span><span class="var-description">: n日</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetToday" id="getToday"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getToday</span> (line <span class="line-number">188</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">今日の日付を取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> YYYY-MM-DD</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">stirng</span>
+		<span class="method-name">
+			getToday
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetYearBeginDate" id="getYearBeginDate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getYearBeginDate</span> (line <span class="line-number">331</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">年開始日時を取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 年開始日時(YYYY-MM-DD hh:mm:ss)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getYearBeginDate
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$year</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$nendo</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$nendo</span><span class="var-description">: 年度</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$year</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetYearEndDate" id="getYearEndDate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getYearEndDate</span> (line <span class="line-number">344</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">年終了日時を取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 年度終了日時(YYYY-MM-DD hh:mm:ss)</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getYearEndDate
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$year</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$nendo</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$nendo</span><span class="var-description">: 年度</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$year</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetZendDate" id="getZendDate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getZendDate</span> (line <span class="line-number">111</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Zend_Dateインスタンスの取得</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Date</span>
+		<span class="method-name">
+			getZendDate
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodisEmpty" id="isEmpty"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static isEmpty</span> (line <span class="line-number">587</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">空値チェック</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> TRUE:空値である</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			isEmpty
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$value</span><span class="var-description">: チェック対象変数</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisLater" id="isLater"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static isLater</span> (line <span class="line-number">201</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">$timeStamp1が$timeStamp2より新しいかどうか比較</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 真：$timeStamp1が$timeStamp2より新しい</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">boolean</span>
+		<span class="method-name">
+			isLater
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$timeStamp1</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$timeStamp2</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$timeStamp1</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$timeStamp2</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadConfig" id="loadConfig"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static loadConfig</span> (line <span class="line-number">61</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">設定ファイルの読み込み</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Config</span>
+		<span class="method-name">
+			loadConfig
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$configFile</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$section</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$configFile</span><span class="var-description">: 設定ファイルパス</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$section</span><span class="var-description">: セクション</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmbStringLength" id="mbStringLength"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static mbStringLength</span> (line <span class="line-number">630</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8文字列の文字数を取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 文字数</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			mbStringLength
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: UTF-8文字列</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmbStringToArray" id="mbStringToArray"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static mbStringToArray</span> (line <span class="line-number">612</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8文字列を1文字ずつ分割</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 分割した文字列</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			mbStringToArray
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$string</span><span class="var-description">: UTF-8文字列</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectedDayBeforeDate" id="selectedDayBeforeDate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static selectedDayBeforeDate</span> (line <span class="line-number">270</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">指定日付からn日前の日時を取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> YYYY-MM-DD hh:mm:ss</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">stirng</span>
+		<span class="method-name">
+			selectedDayBeforeDate
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span> = <span class="var-default">7</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span><span class="var-description">: YYYY-MM-DD</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$n</span><span class="var-description">: n日</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectedDayLaterDate" id="selectedDayLaterDate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static selectedDayLaterDate</span> (line <span class="line-number">253</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">指定日付からn日後の日時を取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> YYYY-MM-DD hh:mm:ss</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">stirng</span>
+		<span class="method-name">
+			selectedDayLaterDate
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span>, [<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span><span class="var-description">: YYYY-MM-DD</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$n</span><span class="var-description">: n日</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectedMonthAgoDate" id="selectedMonthAgoDate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static selectedMonthAgoDate</span> (line <span class="line-number">236</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">現在時点からnか月前の日時を取得</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Date</span>
+		<span class="method-name">
+			selectedMonthAgoDate
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$n</span><span class="var-description">: nか月</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodselectedMonthLaterDate" id="selectedMonthLaterDate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static selectedMonthLaterDate</span> (line <span class="line-number">220</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">現在時点からnか月後の日時を取得</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Date</span>
+		<span class="method-name">
+			selectedMonthLaterDate
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$n</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$n</span><span class="var-description">: nか月</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetZendDate" id="setZendDate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setZendDate</span> (line <span class="line-number">128</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">指定日時、指定フォーマットでのZend_Dateインスタンスの取得</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Date</span>
+		<span class="method-name">
+			setZendDate
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$date</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$locale</span> = <span class="var-default">App_Const::DEFAULT_LOCALE</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$date</span><span class="var-description">: 日時</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$format</span><span class="var-description">: フォーマット</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$locale</span><span class="var-description">: ロケール</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsjiswin2utf8" id="sjiswin2utf8"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static sjiswin2utf8</span> (line <span class="line-number">657</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">SJIS-win-&gt;UTF-8、改行除去</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 変換後文字列</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			sjiswin2utf8
+		</span>
+					(<span class="var-type">stirng</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">stirng</span>
+				<span class="var-name">$string</span><span class="var-description">: 変換前文字列</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodunderscoreToCamelCase" id="underscoreToCamelCase"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static underscoreToCamelCase</span> (line <span class="line-number">422</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">FOO_BAR -&gt; FooBar 変換</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 変換後の文字列</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			underscoreToCamelCase
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span><span class="var-description">: 変換する文字列</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodutf2sjiswin" id="utf2sjiswin"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static utf2sjiswin</span> (line <span class="line-number">643</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UTF-8-&gt;SJIS-win、改行除去</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 変換後文字列</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			utf2sjiswin
+		</span>
+					(<span class="var-type">stirng</span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">stirng</span>
+				<span class="var-name">$string</span><span class="var-description">: 変換前文字列</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constCONFIG_CACHE_LIFETIME" id="CONFIG_CACHE_LIFETIME"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">CONFIG_CACHE_LIFETIME</span>
+			 = <span class="const-default"> 7200</span>
+			(line <span class="line-number">30</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">キャッシュ有効期限</p>
+	
+	
+</div>
+<a name="constPASSWORD_LEN" id="PASSWORD_LEN"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">PASSWORD_LEN</span>
+			 = <span class="const-default"> 8</span>
+			(line <span class="line-number">35</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">初期パスワードの長さ</p>
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 27 Mar 2014 17:37:28 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+	</p>
+	</div></body>
+</html>

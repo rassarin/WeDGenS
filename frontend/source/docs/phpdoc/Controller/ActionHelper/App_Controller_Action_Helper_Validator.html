@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class App_Controller_Action_Helper_Validator</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> App_Controller_Action_Helper_Validator</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|													<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">App_Controller_Action_Helper_Validator クラス</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Mitsubishi Space Software Co.,Ltd.</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_library---App---Controller---Action---Helper---Validator.php.html">/library/App/Controller/Action/Helper/Validator.php</a> (line <span class="field">24</span>)
+		</p>
+		
+				
+		<pre>Zend_Controller_Action_Helper_Abstract
+   |
+   --App_Controller_Action_Helper_Validator</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Validator_IndexValidator.html">Helper_Validator_IndexValidator</a>
+					</td>
+					<td>
+											Helper_Validator_IndexValidator クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Validator_UiValidator.html">Helper_Validator_UiValidator</a>
+					</td>
+					<td>
+											Helper_Validator_UiValidator クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Validator_ApiCheckRequestValidator.html">Helper_Api_Validator_ApiCheckRequestValidator</a>
+					</td>
+					<td>
+											Helper_Api_Validator_ApiCheckRequestValidator クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Validator_ApiGetResultValidator.html">Helper_Api_Validator_ApiGetResultValidator</a>
+					</td>
+					<td>
+											Helper_Api_Validator_ApiGetResultValidator クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Validator_ApiGetStationListValidator.html">Helper_Api_Validator_ApiGetStationListValidator</a>
+					</td>
+					<td>
+											Helper_Api_Validator_ApiGetStationListValidator クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Validator_ApiGetParamListValidator.html">Helper_Api_Validator_ApiGetParamListValidator</a>
+					</td>
+					<td>
+											Helper_Api_Validator_ApiGetParamListValidator クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Validator_ApiRegisterDataValidator.html">Helper_Api_Validator_ApiRegisterDataValidator</a>
+					</td>
+					<td>
+											Helper_Api_Validator_ApiRegisterDataValidator クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Validator_ApiGetDataTypeListValidator.html">Helper_Api_Validator_ApiGetDataTypeListValidator</a>
+					</td>
+					<td>
+											Helper_Api_Validator_ApiGetDataTypeListValidator クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Validator_ApiSendRequestValidator.html">Helper_Api_Validator_ApiSendRequestValidator</a>
+					</td>
+					<td>
+											Helper_Api_Validator_ApiSendRequestValidator クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Validator_ApiGetLibraryListValidator.html">Helper_Api_Validator_ApiGetLibraryListValidator</a>
+					</td>
+					<td>
+											Helper_Api_Validator_ApiGetLibraryListValidator クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Validator_ApiGetSourceListValidator.html">Helper_Api_Validator_ApiGetSourceListValidator</a>
+					</td>
+					<td>
+											Helper_Api_Validator_ApiGetSourceListValidator クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Validator_ApiAuthValidator.html">Helper_Api_Validator_ApiAuthValidator</a>
+					</td>
+					<td>
+											Helper_Api_Validator_ApiAuthValidator クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Validator_ApiIndexValidator.html">Helper_Api_Validator_ApiIndexValidator</a>
+					</td>
+					<td>
+											Helper_Api_Validator_ApiIndexValidator クラス
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../Controller/Helper/Helper_Api_Validator_ApiGetRegionListValidator.html">Helper_Api_Validator_ApiGetRegionListValidator</a>
+					</td>
+					<td>
+											Helper_Api_Validator_ApiGetRegionListValidator クラス
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../Controller/ActionHelper/App_Controller_Action_Helper_Validator.html">App_Controller_Action_Helper_Validator</a></span>
+										<a href="#direct" title="details" class="method-name">direct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">$validator</span>
+										<a href="#getFilterInput" title="details" class="method-name">getFilterInput</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getName" title="details" class="method-name">getName</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methoddirect" id="direct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">direct</span> (line <span class="line-number">33</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ヘルパーデフォルトメソッド</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータヘルパー</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../Controller/ActionHelper/App_Controller_Action_Helper_Validator.html">App_Controller_Action_Helper_Validator</a></span>
+		<span class="method-name">
+			direct
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetFilterInput" id="getFilterInput"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getFilterInput</span> (line <span class="line-number">61</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">バリデータのセット</p>
+<p class="description"><p>helpers/Validator/コントローラ名Validator.php から  &quot;onアクション名&quot;のメソッドを呼び出す。</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Zend_Filter_Inputインスタンス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">$validator</span>
+		<span class="method-name">
+			getFilterInput
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$query</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$query</span><span class="var-description">: ユーザ入力値</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetName" id="getName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getName</span> (line <span class="line-number">45</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ヘルパー名の取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ヘルパー名</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getName
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../Controller/Helper/Helper_Validator_IndexValidator.html#methodgetName">Helper_Validator_IndexValidator::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Validator_UiValidator.html#methodgetName">Helper_Validator_UiValidator::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Validator_ApiCheckRequestValidator.html#methodgetName">Helper_Api_Validator_ApiCheckRequestValidator::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Validator_ApiGetResultValidator.html#methodgetName">Helper_Api_Validator_ApiGetResultValidator::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Validator_ApiGetStationListValidator.html#methodgetName">Helper_Api_Validator_ApiGetStationListValidator::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Validator_ApiGetParamListValidator.html#methodgetName">Helper_Api_Validator_ApiGetParamListValidator::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Validator_ApiRegisterDataValidator.html#methodgetName">Helper_Api_Validator_ApiRegisterDataValidator::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Validator_ApiGetDataTypeListValidator.html#methodgetName">Helper_Api_Validator_ApiGetDataTypeListValidator::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Validator_ApiSendRequestValidator.html#methodgetName">Helper_Api_Validator_ApiSendRequestValidator::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Validator_ApiGetLibraryListValidator.html#methodgetName">Helper_Api_Validator_ApiGetLibraryListValidator::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Validator_ApiGetSourceListValidator.html#methodgetName">Helper_Api_Validator_ApiGetSourceListValidator::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Validator_ApiAuthValidator.html#methodgetName">Helper_Api_Validator_ApiAuthValidator::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Validator_ApiIndexValidator.html#methodgetName">Helper_Api_Validator_ApiIndexValidator::getName()</a>
+								: ヘルパー名の取得
+							</li>
+					<li>
+				<a href="../../Controller/Helper/Helper_Api_Validator_ApiGetRegionListValidator.html#methodgetName">Helper_Api_Validator_ApiGetRegionListValidator::getName()</a>
+								: ヘルパー名の取得
+							</li>
+				</ul>
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 27 Mar 2014 17:37:29 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+	</p>
+	</div></body>
+</html>

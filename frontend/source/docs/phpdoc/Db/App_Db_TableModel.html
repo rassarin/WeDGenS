@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class App_Db_TableModel</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> App_Db_TableModel</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">App_Db_TableModel クラス</p>
+<p class="description"><p>テーブルモデル生成クラス。</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Mitsubishi Space Software Co.,Ltd.</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_library---App---Db---TableModel.php.html">/library/App/Db/TableModel.php</a> (line <span class="field">25</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Db_Table_Abstract</span>
+										<a href="#getModelClass" title="details" class="method-name">getModelClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getModelClassName" title="details" class="method-name">getModelClassName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Db_Table_Abstract</span>
+										<a href="#getModuleModelClass" title="details" class="method-name">getModuleModelClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getModuleModelClassName" title="details" class="method-name">getModuleModelClassName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Db_Table_Abstract</span>
+										<a href="#getModuleTableModelClass" title="details" class="method-name">getModuleTableModelClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getModuleTableModelClassName" title="details" class="method-name">getModuleTableModelClassName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Db_Table_Abstract</span>
+										<a href="#getTableModelClass" title="details" class="method-name">getTableModelClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#getTableModelClassName" title="details" class="method-name">getTableModelClassName</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>)
+									</div>
+																																																																															</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetModelClass" id="getModelClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getModelClass</span> (line <span class="line-number">137</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モデル名からモデルクラスを生成する</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> テーブルモデルクラス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Db_Table_Abstract</span>
+		<span class="method-name">
+			getModelClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$modelName</span><span class="var-description">: モデル名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dbName</span><span class="var-description">: DB接続名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetModelClassName" id="getModelClassName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getModelClassName</span> (line <span class="line-number">69</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モデル名からモデルクラス名を取得する</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> モデルクラス名</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getModelClassName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$modelName</span><span class="var-description">: モデル名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetModuleModelClass" id="getModuleModelClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getModuleModelClass</span> (line <span class="line-number">154</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モデル名からモジュールモデルクラスを生成する</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> モジュールモデルクラス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Db_Table_Abstract</span>
+		<span class="method-name">
+			getModuleModelClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$moduleName</span><span class="var-description">: モジュール名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$modelName</span><span class="var-description">: モデル名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dbName</span><span class="var-description">: DB接続名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetModuleModelClassName" id="getModuleModelClassName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getModuleModelClassName</span> (line <span class="line-number">86</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">モデル名からモジュールモデルクラス名を取得する</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> モジュールモデルクラス名</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getModuleModelClassName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$modelName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$moduleName</span><span class="var-description">: モジュール名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$modelName</span><span class="var-description">: モデル名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetModuleTableModelClass" id="getModuleTableModelClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getModuleTableModelClass</span> (line <span class="line-number">121</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">テーブル名からモジュールテーブルモデルクラスを生成する</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> モジュールテーブルモデルクラス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Db_Table_Abstract</span>
+		<span class="method-name">
+			getModuleTableModelClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$moduleName</span><span class="var-description">: モジュール名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tableName</span><span class="var-description">: テーブル名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dbName</span><span class="var-description">: DB接続名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetModuleTableModelClassName" id="getModuleTableModelClassName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getModuleTableModelClassName</span> (line <span class="line-number">52</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">テーブル名からモジュールテーブルモデルクラス名を取得する</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> モジュールテーブルモデルクラス名</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getModuleTableModelClassName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$moduleName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$moduleName</span><span class="var-description">: モジュール名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tableName</span><span class="var-description">: テーブル名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTableModelClass" id="getTableModelClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getTableModelClass</span> (line <span class="line-number">104</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">テーブル名からテーブルモデルクラスを生成する</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> テーブルモデルクラス</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Db_Table_Abstract</span>
+		<span class="method-name">
+			getTableModelClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$dbName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tableName</span><span class="var-description">: テーブル名</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$dbName</span><span class="var-description">: DB接続名</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetTableModelClassName" id="getTableModelClassName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getTableModelClassName</span> (line <span class="line-number">35</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">テーブル名からテーブルモデルクラス名を取得する</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> テーブルモデルクラス名</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			getTableModelClassName
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$tableName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tableName</span><span class="var-description">: テーブル名</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 27 Mar 2014 17:37:27 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+	</p>
+	</div></body>
+</html>

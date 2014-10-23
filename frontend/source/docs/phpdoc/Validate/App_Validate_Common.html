@@ -1,0 +1,2343 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class App_Validate_Common</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> App_Validate_Common</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">App_Validate_Common クラス</p>
+<p class="description"><p>共通バリデータ定義クラス</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Mitsubishi Space Software Co.,Ltd.</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_library---App---Validate---Common.php.html">/library/App/Validate/Common.php</a> (line <span class="field">23</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ZF_BASIC_VERSION" title="details" class="const-name">ZF_BASIC_VERSION</a> = 					<span class="var-type"> '1.8.4'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+									<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Filter_Input</span>
+										<a href="#createDefaultFilterInput" title="details" class="method-name">createDefaultFilterInput</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$filters</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$valids</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$request</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">array</span>
+										<a href="#getDefaultFilterInputOption" title="details" class="method-name">getDefaultFilterInputOption</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setAlnumCharSearchValidator" title="details" class="method-name">setAlnumCharSearchValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setAlnumCharValidator" title="details" class="method-name">setAlnumCharValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setAlnumValidator" title="details" class="method-name">setAlnumValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setAnyValidator" title="details" class="method-name">setAnyValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setBooleanValidator" title="details" class="method-name">setBooleanValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setCoordinateValidator" title="details" class="method-name">setCoordinateValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setCsrfTokenValidator" title="details" class="method-name">setCsrfTokenValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setDateTimeValidator" title="details" class="method-name">setDateTimeValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setDateValidator" title="details" class="method-name">setDateValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setDurationIdValidator" title="details" class="method-name">setDurationIdValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setEnumValidator" title="details" class="method-name">setEnumValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$min</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$max</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setExistsValidator" title="details" class="method-name">setExistsValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$check</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setFieldValidator" title="details" class="method-name">setFieldValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setFlagValidator" title="details" class="method-name">setFlagValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setIdentifierValidator" title="details" class="method-name">setIdentifierValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setIdValidator" title="details" class="method-name">setIdValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setIntValidator" title="details" class="method-name">setIntValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setIpAddrValidator" title="details" class="method-name">setIpAddrValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setMailAddressValidator" title="details" class="method-name">setMailAddressValidator</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setMonthValidator" title="details" class="method-name">setMonthValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setMustAlnumCharValidator" title="details" class="method-name">setMustAlnumCharValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setMustAlnumValidator" title="details" class="method-name">setMustAlnumValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setMustAnyValidator" title="details" class="method-name">setMustAnyValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setMustDataTypeIdValidator" title="details" class="method-name">setMustDataTypeIdValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setMustDurationIdValidator" title="details" class="method-name">setMustDurationIdValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setMustFieldValidator" title="details" class="method-name">setMustFieldValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setMustFlagValidator" title="details" class="method-name">setMustFlagValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setMustIdentifierValidator" title="details" class="method-name">setMustIdentifierValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setMustIdValidator" title="details" class="method-name">setMustIdValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setMustIntValidator" title="details" class="method-name">setMustIntValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setMustTextValidator" title="details" class="method-name">setMustTextValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setMustUuidValidator" title="details" class="method-name">setMustUuidValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setMustXmlValidator" title="details" class="method-name">setMustXmlValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setNaturalNumberValidator" title="details" class="method-name">setNaturalNumberValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setNotEmptyValidator" title="details" class="method-name">setNotEmptyValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setOperatorValidator" title="details" class="method-name">setOperatorValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Filter</span>
+										<a href="#setParamDefaultFilter" title="details" class="method-name">setParamDefaultFilter</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Filter</span>
+										<a href="#setParamNoStripTagsFilter" title="details" class="method-name">setParamNoStripTagsFilter</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Filter</span>
+										<a href="#setParamNoTrimFilter" title="details" class="method-name">setParamNoTrimFilter</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Filter</span>
+										<a href="#setParamStripTagsFilter" title="details" class="method-name">setParamStripTagsFilter</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Filter</span>
+										<a href="#setParamWebInputFilter" title="details" class="method-name">setParamWebInputFilter</a>
+											([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$stripTag</span> = <span class="var-default">true</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setPasswordValidator" title="details" class="method-name">setPasswordValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setPerPageValidator" title="details" class="method-name">setPerPageValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setRangeTypeIdValidator" title="details" class="method-name">setRangeTypeIdValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setResponseFormatValidator" title="details" class="method-name">setResponseFormatValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setResultFormatValidator" title="details" class="method-name">setResultFormatValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setSortItemValidator" title="details" class="method-name">setSortItemValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setTextValidator" title="details" class="method-name">setTextValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setUriValidator" title="details" class="method-name">setUriValidator</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setUuidValidator" title="details" class="method-name">setUuidValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setYearMonthValidator" title="details" class="method-name">setYearMonthValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">Zend_Validate</span>
+										<a href="#setYearValidator" title="details" class="method-name">setYearValidator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#toString" title="details" class="method-name">toString</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$messages</span>)
+									</div>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																							</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcreateDefaultFilterInput" id="createDefaultFilterInput"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static createDefaultFilterInput</span> (line <span class="line-number">72</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Zend_Filter_Inputインスタンス生成</p>
+<p class="description"><p>エスケープ処理：あり(HtmlEntities)</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Filter_Input</span>
+		<span class="method-name">
+			createDefaultFilterInput
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$filters</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$valids</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$request</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$options</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$filters</span><span class="var-description">: フィルタ定義</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$valids</span><span class="var-description">: バリデータ定義</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$request</span><span class="var-description">: リクエストパラメータ</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$options</span><span class="var-description">: Zend_Filter_Inputオプション</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetDefaultFilterInputOption" id="getDefaultFilterInputOption"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static getDefaultFilterInputOption</span> (line <span class="line-number">100</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Zend_Filter_Inputオプションの取得</p>
+<p class="description"><p>エスケープ処理：なし</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Zend_Filter_Inputオプション</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">array</span>
+		<span class="method-name">
+			getDefaultFilterInputOption
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetAlnumCharSearchValidator" id="setAlnumCharSearchValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setAlnumCharSearchValidator</span> (line <span class="line-number">985</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">英数記号のバリデータ生成</p>
+<p class="description"><p>必須項目、英数+一部記号(-_:)。空白のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setAlnumCharSearchValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetAlnumCharValidator" id="setAlnumCharValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setAlnumCharValidator</span> (line <span class="line-number">962</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">英数記号のバリデータ生成</p>
+<p class="description"><p>必須項目、英数+一部記号(-_:)のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setAlnumCharValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetAlnumValidator" id="setAlnumValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setAlnumValidator</span> (line <span class="line-number">431</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">英数字のバリデータ生成</p>
+<p class="description"><p>英字＋数値のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setAlnumValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetAnyValidator" id="setAnyValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setAnyValidator</span> (line <span class="line-number">260</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">バリデータ不要の場合のダミーバリデータ生成</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setAnyValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetBooleanValidator" id="setBooleanValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setBooleanValidator</span> (line <span class="line-number">1537</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">真偽値のバリデータ生成</p>
+<p class="description"><p>0、1のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setBooleanValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetCoordinateValidator" id="setCoordinateValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setCoordinateValidator</span> (line <span class="line-number">1401</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">座標のバリデータ生成</p>
+<p class="description"><p>+/-m.n形式のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setCoordinateValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetCsrfTokenValidator" id="setCsrfTokenValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setCsrfTokenValidator</span> (line <span class="line-number">1215</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CSRF対策トークンのバリデータ生成</p>
+<p class="description"><p>0-9a-fのみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setCsrfTokenValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDateTimeValidator" id="setDateTimeValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setDateTimeValidator</span> (line <span class="line-number">1008</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">日付(ISO8601 DateTime)のバリデータ生成</p>
+<p class="description"><p>YYYY-MM-DDThh:mm:ssZのみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setDateTimeValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDateValidator" id="setDateValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setDateValidator</span> (line <span class="line-number">731</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">日付のバリデータ生成</p>
+<p class="description"><p>YYYY-MM-DDのみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setDateValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDurationIdValidator" id="setDurationIdValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setDurationIdValidator</span> (line <span class="line-number">1491</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">デュレーション種別のバリデータ生成</p>
+<p class="description"><p>hourly、dailyのみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setDurationIdValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetEnumValidator" id="setEnumValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setEnumValidator</span> (line <span class="line-number">395</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">列挙型のバリデータ生成</p>
+<p class="description"><p>指定範囲($min &lt;= x &lt;= $max)の整数のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setEnumValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$min</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$max</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$min</span><span class="var-description">: エラーメッセージ</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$max</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetExistsValidator" id="setExistsValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setExistsValidator</span> (line <span class="line-number">1150</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">配列存在チェックバリデータ生成</p>
+<p class="description"><p>配列にキーが存在する場合のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setExistsValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$check</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$check</span><span class="var-description">: チェック用配列</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetFieldValidator" id="setFieldValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setFieldValidator</span> (line <span class="line-number">514</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">テーブルフィールド名のバリデータ生成</p>
+<p class="description"><p>英字＋数値＋「_」のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setFieldValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetFlagValidator" id="setFlagValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setFlagValidator</span> (line <span class="line-number">793</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フラグのバリデータ生成</p>
+<p class="description"><p>1、または、2のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setFlagValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetIdentifierValidator" id="setIdentifierValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setIdentifierValidator</span> (line <span class="line-number">939</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">識別子のバリデータ生成</p>
+<p class="description"><p>必須項目、英数+一部記号(-_:.)のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setIdentifierValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetIdValidator" id="setIdValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setIdValidator</span> (line <span class="line-number">363</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">IDのバリデータ生成</p>
+<p class="description"><p>1以上の整数のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setIdValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetIntValidator" id="setIntValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setIntValidator</span> (line <span class="line-number">560</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">数値のバリデータ生成</p>
+<p class="description"><p>整数のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setIntValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetIpAddrValidator" id="setIpAddrValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setIpAddrValidator</span> (line <span class="line-number">1188</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">IPアドレスのバリデータ生成</p>
+<p class="description"><p>\d.\d.\d.\dのみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setIpAddrValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMailAddressValidator" id="setMailAddressValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setMailAddressValidator</span> (line <span class="line-number">815</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">メールアドレスのバリデータ生成</p>
+<p class="description"><p>MAILアドレスのみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setMailAddressValidator
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetMonthValidator" id="setMonthValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setMonthValidator</span> (line <span class="line-number">1089</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">月のバリデータ生成</p>
+<p class="description"><p>1～12のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setMonthValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMustAlnumCharValidator" id="setMustAlnumCharValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setMustAlnumCharValidator</span> (line <span class="line-number">879</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">必須英数記号のバリデータ生成</p>
+<p class="description"><p>必須項目、英数+一部記号(-_)のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setMustAlnumCharValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMustAlnumValidator" id="setMustAlnumValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setMustAlnumValidator</span> (line <span class="line-number">454</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">必須英数字のバリデータ生成</p>
+<p class="description"><p>必須項目、英字＋数値のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setMustAlnumValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMustAnyValidator" id="setMustAnyValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setMustAnyValidator</span> (line <span class="line-number">281</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">バリデータ不要の場合の必須ダミーバリデータ生成</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setMustAnyValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMustDataTypeIdValidator" id="setMustDataTypeIdValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setMustDataTypeIdValidator</span> (line <span class="line-number">1354</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">データ種別IDのバリデータ生成</p>
+<p class="description"><p>必須項目、1以上の整数のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setMustDataTypeIdValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMustDurationIdValidator" id="setMustDurationIdValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setMustDurationIdValidator</span> (line <span class="line-number">1459</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">デュレーション種別のバリデータ生成</p>
+<p class="description"><p>daily, hourlyのみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setMustDurationIdValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMustFieldValidator" id="setMustFieldValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setMustFieldValidator</span> (line <span class="line-number">484</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">必須テーブルフィールド名のバリデータ生成</p>
+<p class="description"><p>必須項目、英字＋数値＋「_」のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setMustFieldValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMustFlagValidator" id="setMustFlagValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setMustFlagValidator</span> (line <span class="line-number">763</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">フラグのバリデータ生成</p>
+<p class="description"><p>必須項目、1、または、2のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setMustFlagValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMustIdentifierValidator" id="setMustIdentifierValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setMustIdentifierValidator</span> (line <span class="line-number">909</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">識別子のバリデータ生成</p>
+<p class="description"><p>必須項目、英数+一部記号(-_:.)のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setMustIdentifierValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMustIdValidator" id="setMustIdValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setMustIdValidator</span> (line <span class="line-number">327</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">必須IDのバリデータ生成</p>
+<p class="description"><p>必須項目、1以上の整数のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setMustIdValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMustIntValidator" id="setMustIntValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setMustIntValidator</span> (line <span class="line-number">597</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">必須数値のバリデータ生成</p>
+<p class="description"><p>必須項目、整数のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setMustIntValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMustTextValidator" id="setMustTextValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setMustTextValidator</span> (line <span class="line-number">671</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">必須テキストのバリデータ生成</p>
+<p class="description"><p>必須項目、1&lt;=文字数&lt;=maxのみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setMustTextValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max</span><span class="var-description">: 最大文字数</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMustUuidValidator" id="setMustUuidValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setMustUuidValidator</span> (line <span class="line-number">1298</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">必須UUID形式のバリデータ生成</p>
+<p class="description"><p>abc3204c-9dd8-11e3-b540-a71d99c51cbe 形式のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setMustUuidValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMustXmlValidator" id="setMustXmlValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setMustXmlValidator</span> (line <span class="line-number">1245</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XMLバリデータ生成</p>
+<p class="description"><p>XML文字列のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setMustXmlValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetNaturalNumberValidator" id="setNaturalNumberValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setNaturalNumberValidator</span> (line <span class="line-number">633</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">1以上の自然数のバリデータ生成</p>
+<p class="description"><p>1以上の自然数のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setNaturalNumberValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetNotEmptyValidator" id="setNotEmptyValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setNotEmptyValidator</span> (line <span class="line-number">304</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">必須項目のバリデータ生成</p>
+<p class="description"><p>必須項目</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setNotEmptyValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetOperatorValidator" id="setOperatorValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setOperatorValidator</span> (line <span class="line-number">537</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">論理演算子のバリデータ生成</p>
+<p class="description"><p>AND、ORのみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setOperatorValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetParamDefaultFilter" id="setParamDefaultFilter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setParamDefaultFilter</span> (line <span class="line-number">122</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">パラメータのデフォルトフィルタ生成</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> フィルタ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Filter</span>
+		<span class="method-name">
+			setParamDefaultFilter
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetParamNoStripTagsFilter" id="setParamNoStripTagsFilter"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setParamNoStripTagsFilter</span> (line <span class="line-number">136</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">前後の空白除去のみ行うフィルタ生成</p>
+<p class="description"><p>前後の空白除去</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> フィルタ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Filter</span>
+		<span class="method-name">
+			setParamNoStripTagsFilter
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetParamNoTrimFilter" id="setParamNoTrimFilter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setParamNoTrimFilter</span> (line <span class="line-number">154</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">タグの除去のみ行うフィルタ生成</p>
+<p class="description"><p>タグの除去</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> フィルタ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Filter</span>
+		<span class="method-name">
+			setParamNoTrimFilter
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetParamStripTagsFilter" id="setParamStripTagsFilter"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setParamStripTagsFilter</span> (line <span class="line-number">172</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">前後の空白、および、タグの除去を行うフィルタ生成</p>
+<p class="description"><p>前後の空白、および、タグの除去</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> フィルタ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Filter</span>
+		<span class="method-name">
+			setParamStripTagsFilter
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetParamWebInputFilter" id="setParamWebInputFilter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setParamWebInputFilter</span> (line <span class="line-number">193</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">前後の空白、および、タグの除去、特定文字列の置換を行うフィルタ生成</p>
+<p class="description"><p>前後の空白、および、タグの除去、特定文字列の置換</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> フィルタ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Filter</span>
+		<span class="method-name">
+			setParamWebInputFilter
+		</span>
+					([<span class="var-type">boolean</span>&nbsp;<span class="var-name">$stripTag</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$stripTag</span><span class="var-description">: 真：タグを除去する。</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPasswordValidator" id="setPasswordValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setPasswordValidator</span> (line <span class="line-number">232</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">パスワードのバリデータ生成</p>
+<p class="description"><p>必須項目、英数(小文字)+一部記号(@_&lt;&gt;=,.-:;+*#$%&amp;!)のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setPasswordValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPerPageValidator" id="setPerPageValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setPerPageValidator</span> (line <span class="line-number">1173</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">1ページ当たりのページ数のバリデータ生成</p>
+<p class="description"><p>1～100のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setPerPageValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRangeTypeIdValidator" id="setRangeTypeIdValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setRangeTypeIdValidator</span> (line <span class="line-number">1427</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">地点選択範囲種別のバリデータ生成</p>
+<p class="description"><p>point, area, mesh, userのみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setRangeTypeIdValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetResponseFormatValidator" id="setResponseFormatValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setResponseFormatValidator</span> (line <span class="line-number">1275</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">レスポンス形式のバリデータ生成</p>
+<p class="description"><p>xml、jsonのみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setResponseFormatValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetResultFormatValidator" id="setResultFormatValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setResultFormatValidator</span> (line <span class="line-number">1514</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">出力形式のバリデータ生成</p>
+<p class="description"><p>xml、htmlのみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setResultFormatValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSortItemValidator" id="setSortItemValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setSortItemValidator</span> (line <span class="line-number">1041</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ソート項目のバリデータ生成</p>
+<p class="description"><p>英数記号:[az]形式のみ指定可。</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setSortItemValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetTextValidator" id="setTextValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setTextValidator</span> (line <span class="line-number">705</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">テキストのバリデータ生成</p>
+<p class="description"><p>0&lt;=文字数&lt;=maxのみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setTextValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$max</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$max</span><span class="var-description">: 最大文字数</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetUriValidator" id="setUriValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setUriValidator</span> (line <span class="line-number">853</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">URIのバリデータ生成</p>
+<p class="description"><p>URIのみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setUriValidator
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetUuidValidator" id="setUuidValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setUuidValidator</span> (line <span class="line-number">1329</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UUID形式のバリデータ生成</p>
+<p class="description"><p>abc3204c-9dd8-11e3-b540-a71d99c51cbe 形式のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setUuidValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetYearMonthValidator" id="setYearMonthValidator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setYearMonthValidator</span> (line <span class="line-number">1126</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">年月のバリデータ生成</p>
+<p class="description"><p>YYYY-MMのみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setYearMonthValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetYearValidator" id="setYearValidator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static setYearValidator</span> (line <span class="line-number">1066</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">西暦のバリデータ生成</p>
+<p class="description"><p>数値4桁のみ</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">Zend_Validate</span>
+		<span class="method-name">
+			setYearValidator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$message</span><span class="var-description">: エラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoString" id="toString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static toString</span> (line <span class="line-number">38</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">バリデータエラーメッセージの取得</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> バリデータエラーメッセージ</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			toString
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$messages</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$messages</span><span class="var-description">: バリデータエラーメッセージ</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constZF_BASIC_VERSION" id="ZF_BASIC_VERSION"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ZF_BASIC_VERSION</span>
+			 = <span class="const-default"> '1.8.4'</span>
+			(line <span class="line-number">28</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">基準となるZFのバージョン</p>
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 27 Mar 2014 17:37:13 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class Api_Service_Request</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> Api_Service_Request</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Api_Service_Request クラス</p>
+<p class="description"><p>リクエスト管理サービスクラス</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Mitsubishi Space Software Co.,Ltd.</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_application---modules---api---services---Request.php.html">/application/modules/api/services/Request.php</a> (line <span class="field">26</span>)
+		</p>
+		
+				
+		<pre><a href="../Base/App_Base.html">App_Base</a>
+   |
+   --<a href="../Service/App_Service.html">App_Service</a>
+      |
+      --<a href="../Service/Service_Search.html">Service_Search</a>
+         |
+         --<a href="../Service/Service_Api.html">Service_Api</a>
+            |
+            --Api_Service_Request</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																							
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#checkRequest" title="details" class="method-name">checkRequest</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$requestId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#generateRequestJson" title="details" class="method-name">generateRequestJson</a>
+											(<span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$dataInput</span>, <span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$paramInput</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getDataSources" title="details" class="method-name">getDataSources</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$dataTypeId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getDataTypes" title="details" class="method-name">getDataTypes</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Zend_Cache</span>
+										<a href="#getHdfsCache" title="details" class="method-name">getHdfsCache</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$hdfsFile</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getLibraries" title="details" class="method-name">getLibraries</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getLibraryParams" title="details" class="method-name">getLibraryParams</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$libId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getRegions" title="details" class="method-name">getRegions</a>
+											(<span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getResult" title="details" class="method-name">getResult</a>
+											(<span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">Zipデータ</span>
+										<a href="#getResultArchives" title="details" class="method-name">getResultArchives</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$requestId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$xml</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getResultXml" title="details" class="method-name">getResultXml</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$requestId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getSourceListXml" title="details" class="method-name">getSourceListXml</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$dataTypeId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getStationListXml" title="details" class="method-name">getStationListXml</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$dataTypeId</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$sourceId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getStations" title="details" class="method-name">getStations</a>
+											(<span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$input</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getWgsGeneratorUrl" title="details" class="method-name">getWgsGeneratorUrl</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$requestId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#init" title="details" class="method-name">init</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#registerUserData" title="details" class="method-name">registerUserData</a>
+											(<span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$input</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tmpFile</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#removeRequestParamFromHdfs" title="details" class="method-name">removeRequestParamFromHdfs</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$requestId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#sendRequest" title="details" class="method-name">sendRequest</a>
+											(<span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$dataInput</span>, <span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$paramInput</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#sendToWgsGeneratorApi" title="details" class="method-name">sendToWgsGeneratorApi</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$requestId</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#storeRequestParamToHdfs" title="details" class="method-name">storeRequestParamToHdfs</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$libId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$requestId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$paramJson</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#storeUserDataToHdfs" title="details" class="method-name">storeUserDataToHdfs</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$userDataId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tmpFile</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#validateUploadMetXml" title="details" class="method-name">validateUploadMetXml</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$xmlFile</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../Service/Service_Api.html">Service_Api</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Service/Service_Api.html#var$_hadoopCmdApi">Service_Api::$_hadoopCmdApi</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Service/Service_Api.html#var$_wgsGeneratorWebApi">Service_Api::$_wgsGeneratorWebApi</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../Base/App_Base.html">App_Base</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Base/App_Base.html#var$_config">App_Base::$_config</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Base/App_Base.html#var$_externalFileConfig">App_Base::$_externalFileConfig</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../Base/App_Base.html#var$_module">App_Base::$_module</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcheckRequest" id="checkRequest"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">checkRequest</span> (line <span class="line-number">336</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">リクエストの進捗確認。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 進捗確認結果</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			checkRequest
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$requestId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$requestId</span><span class="var-description">: リクエストID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgenerateRequestJson" id="generateRequestJson"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">generateRequestJson</span> (line <span class="line-number">157</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">パラメータJSONの生成。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> パラメータJSON</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			generateRequestJson
+		</span>
+					(<span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$dataInput</span>, <span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$paramInput</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Zend_Filter_Input</span>
+				<span class="var-name">$dataInput</span><span class="var-description">: ユーザ入力(入力データ部)</span>			</li>
+					<li>
+				<span class="var-type">Zend_Filter_Input</span>
+				<span class="var-name">$paramInput</span><span class="var-description">: ユーザ入力(ライブラリパラメータ部)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetDataSources" id="getDataSources"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getDataSources</span> (line <span class="line-number">466</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">データソースリストの取得。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> データソースリスト</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getDataSources
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$dataTypeId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$dataTypeId</span><span class="var-description">: データ種別ID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetDataTypes" id="getDataTypes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getDataTypes</span> (line <span class="line-number">59</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">データリストの取得。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> データリスト</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getDataTypes
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetHdfsCache" id="getHdfsCache"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getHdfsCache</span> (line <span class="line-number">860</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">HDFSファイル用キャッシュの取得</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zend_Cache</span>
+		<span class="method-name">
+			getHdfsCache
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$hdfsFile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$hdfsFile</span><span class="var-description">: 設定ファイルパス</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetLibraries" id="getLibraries"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getLibraries</span> (line <span class="line-number">47</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ライブラリリストの取得。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ライブラリリスト</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getLibraries
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLibraryParams" id="getLibraryParams"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getLibraryParams</span> (line <span class="line-number">72</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">パラメータリストの取得。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> パラメータリスト</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getLibraryParams
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$libId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$libId</span><span class="var-description">: ライブラリID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetRegions" id="getRegions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getRegions</span> (line <span class="line-number">493</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">リージョンリストの取得。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> リージョンリスト</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getRegions
+		</span>
+					(<span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Zend_Filter_Input</span>
+				<span class="var-name">$input</span><span class="var-description">: ユーザ入力</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetResult" id="getResult"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getResult</span> (line <span class="line-number">349</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">リクエスト実行結果の取得。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> リクエスト実行結果</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getResult
+		</span>
+					(<span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Zend_Filter_Input</span>
+				<span class="var-name">$input</span><span class="var-description">: ユーザ入力</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetResultArchives" id="getResultArchives"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getResultArchives</span> (line <span class="line-number">898</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XML+XSLファイルアーカイブの生成</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Zipデータ</span>
+		<span class="method-name">
+			getResultArchives
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$requestId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$xml</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xml</span><span class="var-description">: XML文字列</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$requestId</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetResultXml" id="getResultXml"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getResultXml</span> (line <span class="line-number">700</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">リクエスト結果MetXMLをHDFSから取得する。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> MetXML文字列</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getResultXml
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$requestId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$requestId</span><span class="var-description">: リクエストID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSourceListXml" id="getSourceListXml"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getSourceListXml</span> (line <span class="line-number">737</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">データソース定義XMLをHDFSから取得する。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> データソース定義XML文字列</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getSourceListXml
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$dataTypeId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$dataTypeId</span><span class="var-description">: データ種別ID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetStationListXml" id="getStationListXml"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getStationListXml</span> (line <span class="line-number">789</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ステーション定義XMLをHDFSから取得する。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ステーション定義XML文字列</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getStationListXml
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$dataTypeId</span>, <span class="var-type">integer</span>&nbsp;<span class="var-name">$sourceId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$dataTypeId</span><span class="var-description">: データ種別ID</span>			</li>
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$sourceId</span><span class="var-description">: データソースID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetStations" id="getStations"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getStations</span> (line <span class="line-number">522</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ステーションリストの取得。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ステーションリスト</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getStations
+		</span>
+					(<span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$input</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Zend_Filter_Input</span>
+				<span class="var-name">$input</span><span class="var-description">: ユーザ入力</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetWgsGeneratorUrl" id="getWgsGeneratorUrl"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getWgsGeneratorUrl</span> (line <span class="line-number">301</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ジェネレータWebAPI URLの取得。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ジェネレータWebAPI URL</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getWgsGeneratorUrl
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$requestId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$requestId</span><span class="var-description">: リクエストID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinit" id="init"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">init</span> (line <span class="line-number">35</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">初期化メソッド</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			init
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../Service/Service_Api.html#methodinit">Service_Api::init()</a></dt>
+						<dd>初期化メソッド</dd>
+					</dl>
+			
+	</div>
+<a name="methodregisterUserData" id="registerUserData"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">registerUserData</span> (line <span class="line-number">414</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ユーザデータの登録。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> ユーザデータ登録結果</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			registerUserData
+		</span>
+					(<span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$input</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tmpFile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Zend_Filter_Input</span>
+				<span class="var-name">$input</span><span class="var-description">: ユーザ入力</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tmpFile</span><span class="var-description">: アップロード一時ファイルパス</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveRequestParamFromHdfs" id="removeRequestParamFromHdfs"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">removeRequestParamFromHdfs</span> (line <span class="line-number">663</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">HDFSのリクエストパラメータファイルを削除する。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 真：削除成功</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			removeRequestParamFromHdfs
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$requestId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$requestId</span><span class="var-description">: リクエストID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsendRequest" id="sendRequest"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">sendRequest</span> (line <span class="line-number">86</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">リクエストの送信。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 送信結果</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			sendRequest
+		</span>
+					(<span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$dataInput</span>, <span class="var-type">Zend_Filter_Input</span>&nbsp;<span class="var-name">$paramInput</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Zend_Filter_Input</span>
+				<span class="var-name">$dataInput</span><span class="var-description">: ユーザ入力(入力データ部)</span>			</li>
+					<li>
+				<span class="var-type">Zend_Filter_Input</span>
+				<span class="var-name">$paramInput</span><span class="var-description">: ユーザ入力(ライブラリパラメータ部)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsendToWgsGeneratorApi" id="sendToWgsGeneratorApi"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">sendToWgsGeneratorApi</span> (line <span class="line-number">268</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ジェネレータWebAPIへリクエストを送信。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 真：リクエスト送信成功</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			sendToWgsGeneratorApi
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$requestId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$requestId</span><span class="var-description">: リクエストID</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstoreRequestParamToHdfs" id="storeRequestParamToHdfs"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">storeRequestParamToHdfs</span> (line <span class="line-number">601</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">リクエストパラメータファイルをHDFSに格納する。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 真：HDFSに格納成功</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			storeRequestParamToHdfs
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$libId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$requestId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$paramJson</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$libId</span><span class="var-description">: ライブラリID</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$requestId</span><span class="var-description">: リクエストID</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$paramJson</span><span class="var-description">: リクエストパラメータJSON</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstoreUserDataToHdfs" id="storeUserDataToHdfs"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">storeUserDataToHdfs</span> (line <span class="line-number">560</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ユーザデータファイルをHDFSに格納する。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 真：HDFSに格納成功</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			storeUserDataToHdfs
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$userDataId</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$tmpFile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$userDataId</span><span class="var-description">: ユーザデータID</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tmpFile</span><span class="var-description">: アップロード一時ファイルパス</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateUploadMetXml" id="validateUploadMetXml"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">validateUploadMetXml</span> (line <span class="line-number">843</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">アップロードされたユーザデータがMetXML形式かどうかチェック。</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 真：XMLSchemaによる妥当性チェックOK</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			validateUploadMetXml
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$xmlFile</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$xmlFile</span><span class="var-description">: XMLファイル</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../Service/Service_Api.html">Service_Api</a></span></p>
+					<blockquote>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Service/Service_Api.html#methodgetCacheConfig">Service_Api::getCacheConfig()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Service/Service_Api.html#methodgetGenratorConfig">Service_Api::getGenratorConfig()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Service/Service_Api.html#methodgetHadoopCmdApi">Service_Api::getHadoopCmdApi()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Service/Service_Api.html#methodgetWgsGeneratorWebApi">Service_Api::getWgsGeneratorWebApi()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Service/Service_Api.html#methodgetXmlSchemaConfig">Service_Api::getXmlSchemaConfig()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Service/Service_Api.html#methodgetXsltConfig">Service_Api::getXsltConfig()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Service/Service_Api.html#methodinit">Service_Api::init()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Service/Service_Api.html#methodsetHadoopCmdApi">Service_Api::setHadoopCmdApi()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Service/Service_Api.html#methodsetWgsGeneratorWebApi">Service_Api::setWgsGeneratorWebApi()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Service/Service_Api.html#methodvalidateResponseXml">Service_Api::validateResponseXml()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../Service/Service_Search.html">Service_Search</a></span></p>
+					<blockquote>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Service/Service_Search.html#methodinit">Service_Search::init()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Service/Service_Search.html#method_createLike">Service_Search::_createLike()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../Service/App_Service.html">App_Service</a></span></p>
+					<blockquote>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Service/App_Service.html#methodinit">App_Service::init()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../Base/App_Base.html">App_Base</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#method__construct">App_Base::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodaccessLog">App_Base::accessLog()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodcriticalLog">App_Base::criticalLog()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methoddebugLog">App_Base::debugLog()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methoderrorLog">App_Base::errorLog()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodgetAccessLogger">App_Base::getAccessLogger()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodgetAdapter">App_Base::getAdapter()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodgetConfig">App_Base::getConfig()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodgetDbTable">App_Base::getDbTable()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodgetErrorLogger">App_Base::getErrorLogger()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodgetJsonModel">App_Base::getJsonModel()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodgetJsonModuleModel">App_Base::getJsonModuleModel()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodgetModel">App_Base::getModel()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodgetModuleDbTable">App_Base::getModuleDbTable()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodgetModuleModel">App_Base::getModuleModel()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodgetModuleName">App_Base::getModuleName()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodgetXmlModel">App_Base::getXmlModel()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodgetXmlModuleModel">App_Base::getXmlModuleModel()</a></span><br>
+													<img src="../media/images/AbstractMethod.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodinit">App_Base::init()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodloadPartialConfig">App_Base::loadPartialConfig()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodnoticeLog">App_Base::noticeLog()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodsetConfig">App_Base::setConfig()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodsetModuleName">App_Base::setModuleName()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../Base/App_Base.html#methodwarningLog">App_Base::warningLog()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 27 Mar 2014 17:37:25 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+	</p>
+	</div></body>
+</html>

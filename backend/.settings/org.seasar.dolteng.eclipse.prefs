@@ -1,0 +1,8 @@
+DaoType=S2JDBC
+DefaultResourcePath=/wgs-backend/src/main/resources
+DefaultRootPackage=jp.go.affrc.naro.wgs
+DefaultSrcPath=/wgs-backend/src/main/java
+ServletPath=/wgs-generator
+ViewType=SA-Struts
+WebContentsRoot=src/main/webapp
+eclipse.preferences.version=1
